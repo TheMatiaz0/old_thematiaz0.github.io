@@ -1,5 +1,5 @@
 # thematiaz0.github.io
-Website for my portfolio.
+Website for my portfolio. Work in progress.
 
 ***
 
