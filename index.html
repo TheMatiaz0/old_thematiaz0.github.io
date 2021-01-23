@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="game games video development programmer programming software engineer engineering designer designing developer developing The Towerer Cyberevolver_Studios">
+    <meta name="description" content="Hey! I'm independent game developer, programmer, designer and this is my portfolio highlighting game programming work over 2 years of experience.">
+    <meta name="author" content="TheMatiaz0">
+    <meta name="robots" content="all">
+    <meta name="language" content="English">
+
+    <meta name="theme-color" content="#468A19">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css\base.css">
+
+    <title>Portfolio - Mateusz "TheMatiaz0" Kusionowicz - Game Developer</title>
+    <link rel="shortcut icon" href="./favicon.jpeg">
+    <link rel="apple-touch-icon" href="./favicon.jpeg" />
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="js\base.js"></script>
+
+    <header>
+    <div class="topright">Version 0.9.9</div>
+        <nav class="navbar navbar-expand-sm">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home" href="#" onclick='ChangeWebsiteTo("home")' aria-current="page">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="about" href="#"  onclick='ChangeWebsiteTo("about")'>About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="work" href="#"  onclick='ChangeWebsiteTo("work")'>Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"  onclick='ChangeWebsiteTo("contact")' id="contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <hr />
+    </header>
+    <div class="wrapper">
+        <a class="btn btn-md btn-success" onclick="skipText()" id="skipButton">Skip</a>
+    </div>
+
+    <div id="console">
+        <div class="container">
+            <div class="row">
+                <div class="col typeColumn">
+                    <div class="typewriter"></div>
+                </div>
+
+                <div class="col artColumn">
+                    <br />
+
+                    <button onclick="toggleImage()" class="btn btn-outline-success asciiButton">Show/Hide ASCII
+                        Picture</button>
+                    <div class="ascii-art" id="closeOpenImage" class="hidden">
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <input type="number" class="form-control downInput" autocomplete="off" oninput='' placeholder="Pick an option...">
+            </div>
+        </div>
+
+        <br /><br />
+        <hr />
+
+        <footer>
+            <div class="container">
+            <div class="row">
+                <div class="col">
+                <p>Made with ❤️ using HTML, CSS, JavaScript, <a class="hyperlink" rel="noopener" target="_blank"
+                        href="https://getbootstrap.com">Bootstrap</a>, <a class="hyperlink" rel="noopener" target="_blank"
+                        href="https://jquery.com">JQuery</a>, <a class="hyperlink" rel="noopener" target="_blank"
+                        href="https://github.com/tameemsafi/typewriterjs">TypewriterJS</a>.</p></div>
+                <div class="col">
+            <div class="footer-links">
+                <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="mailto:TheMatiaz0@protonmail.com"><span class="text">EMAIL</span></a> |</span>
+                <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://github.com/TheMatiaz0"><span class="text">GITHUB</span></a><span> |</span>
+                <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://twitter.com/thematiaz0"><span class="text">TWITTER</span></a><span> |</span>
+                <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://www.linkedin.com/in/mateusz-kusionowicz"><span class="text">LINKEDIN</span></a> |</span>
+                <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://gamejolt.com/@TheMatiaz0"><span class="text">GAME JOLT</span></a><span> |</span>
+                <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://thematiaz0.itch.io"><span class="text">ITCH.IO</span></a></div>
+            </div>
+            </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
