@@ -3,7 +3,7 @@ var typewriter;
 var currentPage = "home";
 
 var contentArray = {"home" : `<h1>Hello, world!</h1><hr />
-I'm <b>Mateusz Kusionowicz</b>, a passionate game developer who loves to <b>design</b> some of ideas, <b>code</b> them and then <b>prototype</b> a lot.
+I'm <b>Mateusz Kusionowicz</b>, a passionate game developer who loves to <b>plan out</b> ideas, <b>code</b> them and then <b>prototype</b> a lot.
 <br /><br />Got an interesting project? Send me a message at <a class='hyperlink' rel="noopener noreferrer" href='mailto:TheMatiaz0@protonmail.com'>TheMatiaz0@protonmail.com</a>.
 <br /><br />
 ========================================================================
@@ -511,7 +511,7 @@ c::;,'..      ..;oddddoodxOl.   :0NNNNNXKkolllllodOK000OOOOO
 
 typewriter.typeString(`<h1>Hello, world!</h1><hr />`)
     .typeString(
-        `I'm <b>Mateusz Kusionowicz</b>, a passionate game developer who loves to <b>design</b> some of ideas, <b>code</b> them and then <b>prototype</b> a lot.`
+        `I'm <b>Mateusz Kusionowicz</b>, a passionate game developer who loves to <b>plan out</b> ideas, <b>code</b> them and then <b>prototype</b> a lot.`
         )
     .pauseFor(90)
     .typeString(
@@ -527,7 +527,7 @@ typewriter.typeString(`<h1>Hello, world!</h1><hr />`)
     .pauseFor(3)
     .typeString(".")
     .deleteChars(23)
-    .typeString(`<br /><br />===========================================================================`)
+    .typeString(`<br /><br />==========================================================================`)
     .typeString(
         `<br /><a href="#" onclick="ChangeWebsiteTo('about')"><img src="images/numberone.png" width="50px" height="50px" class="img-rounded" alt="Option number one"></a> - Check information about my persona,`
         )
