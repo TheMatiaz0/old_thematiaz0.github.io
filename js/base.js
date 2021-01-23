@@ -96,26 +96,26 @@ I'm an independent game developer with 2 year experience, currently based in Cra
 <div class="row">
   <a href="#" onclick="ViewFirstProject()" class="col projectSquare projectSquare-center">
     <div class="projectHeader imgGroup">
-      <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="Images/tt-thumbnail.png">
+      <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="images/tt-thumbnail.png">
     </div>
   </a>
   <a href="#" onclick="ViewSecondProject()" class="col projectSquare projectSquare-center">
   <div class="projectHeader imgGroup">
-    <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="Images/tgib-thumbnail.png">
+    <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="images/tgib-thumbnail.png">
   </div>
 </a>
 </div>
 <div class="row">
   <a href="#" onclick="ViewThirdProject()" class="col projectSquare projectSquare-center">
     <div class="projectHeader imgGroup">
-      <img class="img-fluid img-rounded imgGroupProject" width="600" height="200" src="Images/bp-thumbnail.png">
+      <img class="img-fluid img-rounded imgGroupProject" width="600" height="200" src="images/bp-thumbnail.png">
     </div>
   </a>
 </div>
 <div class="row">
 <a href="#" onclick="ViewFourthProject()" class="col projectSquare projectSquare-center">
   <div class="projectHeader imgGroup">
-    <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="Images/lc-thumbnail.png">
+    <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="images/lc-thumbnail.png">
   </div>
 </a>
 </div>
