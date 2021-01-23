@@ -5,4 +5,4 @@ Website for my portfolio. Work in progress.
 
 *All Rights Reserved*
 
-Mateusz "TheMatiaz0" Kusionowicz @ 2020
+Mateusz "TheMatiaz0" Kusionowicz @ 2020-2021
