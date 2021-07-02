@@ -101,33 +101,68 @@ var ABOUT_CHOICE_2 = `<br /><a href="#" onclick="ChangeWebsiteTo('contact')"><im
 
 var WORK_PROMPT_0 = `<h1>Featured projects:</h1><hr />`;
 var WORK_PROMPT_1 = `
-<div class="container">
 <div class="row">
-  <a href="#" onclick="ViewFirstProject()" class="col projectSquare projectSquare-center">
-    <div class="projectHeader imgGroup">
-      <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="./images/tt-thumbnail.png">
-    </div>
-  </a>
-  <a href="#" onclick="ViewSecondProject()" class="col projectSquare projectSquare-center">
-  <div class="projectHeader imgGroup">
-    <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="./images/tgib-thumbnail.png">
-  </div>
-</a>
+<div class="col-sm-6">
+<div class="card game-card" style="width: 35rem;">
+<a href="#" onclick="ViewFirstProject()">
+<div class="projectHeader">
+<img id="animated" class="img-fluid img-rounded imgGroupProject animated card-img-top" src="./images/tt-preview.gif" alt="">
+<img id="static" class="img-fluid img-rounded static card-img-top" src="./images/tt-thumbnail.png" alt="">
 </div>
+</a>
+<div class="card-body">
+<p class="card-text">The Towerer is rogue-like, bullet-hell shooter based in sci-fi universe.</p>
+</div>
+</div>
+</div>
+
+<div class="col-sm-6">
+<div class="card game-card" style="width: 35rem;">
+<a href="#" onclick="ViewSecondProject()">
+<div class="projectHeader">
+<img id="animated" class="img-fluid img-rounded imgGroupProject animated card-img-top" src="./images/tgib-preview.gif" alt="">
+<img id="static" class="img-fluid img-rounded static card-img-top" src="./images/tgib-thumbnail.png" alt="">
+</div>
+</a>
+<div class="card-body">
+<p class="card-text">This Game Is Broken is infinite walking platformer, where you have to run from the Deadly Wall Of Bugs.</p>
+</div>
+</div>
+</div>
+
+</div>
+
 <div class="row">
-  <a href="#" onclick="ViewThirdProject()" class="col projectSquare projectSquare-center">
-    <div class="projectHeader imgGroup">
-      <img class="img-fluid img-rounded imgGroupProject" width="600" height="200" src="./images/bp-thumbnail.png">
-    </div>
-  </a>
+<div class="col-sm-6">
+<div class="card game-card" style="width: 35rem;">
+<a href="#" onclick="ViewThirdProject()">
+<div class="projectHeader">
+<img id="animated" class="img-fluid img-rounded imgGroupProject animated card-img-top" src="./images/bp-preview.gif" alt="">
+<img id="static" class="img-fluid img-rounded static card-img-top" src="./images/bp-thumbnail.png" alt="">
 </div>
-<a href="#" onclick="ViewFourthProject()" class="col projectSquare projectSquare-center">
-  <div class="projectHeader imgGroup">
-    <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="./images/lc-thumbnail.png">
-  </div>
 </a>
+<div class="card-body">
+<p class="card-text">BluePlayer is an audio listening software with ability to export and import playlists.</p>
 </div>
-</div>`;
+</div>
+</div>
+
+<div class="col-sm-6">
+<div class="card game-card" style="width: 35rem;">
+<a href="#" onclick="ViewFourthProject()">
+<div class="projectHeader">
+<img id="animated" class="img-fluid img-rounded imgGroupProject animated card-img-top" src="./images/lc-preview.gif" alt="">
+<img id="static" class="img-fluid img-rounded static card-img-top" src="./images/lc-thumbnail.png" alt="">
+</div>
+</a>
+<div class="card-body">
+<p class="card-text">Light Checkers is like a classical Checkers game, but you can control all the rules behind it.</p>
+</div>
+</div>
+</div>
+
+</div>
+`;
 
 var CONTACT_PROMPT_0 = `<h1>Contact Info:</h1><hr />`;
 var CONTACT_PROMPT_1 = `Feel free to reach me at: <a rel="noopener noreferrer" href="mailto:TheMatiaz0@protonmail.com" class="hyperlink">TheMatiaz0@protonmail.com</a> or through LinkedIn at: <a class="hyperlink" target="_blank" rel="noopener" href="https://www.linkedin.com/in/mateusz-kusionowicz">https://www.linkedin.com/in/mateusz-kusionowicz</a>.<br />`;
@@ -173,6 +208,15 @@ var contentArray =
 $(document).ready(function()
 {
   ViewHomeText();
+});
+
+
+$(function()
+{
+  $('.projectHeader').on('mouseenter',function()
+  {
+    $(this).toggleClass('animated', 'static');
+  })
 });
 
 
@@ -430,21 +474,7 @@ function ViewAboutMeText()
   $(".downInput").attr('oninput', 'PickChoice($(".downInput").val(), { 1: function() { ChangeWebsiteTo("home"); }, 2: function() { ChangeWebsiteTo("work"); }, 3: function() { ChangeWebsiteTo("contact"); } });')
 
   $(`.ascii-art`).text
-  (`                                                                          
-  ....******...............******....  
-......*******.............*******....  
-......********...........********....  
-......****.,***.........***..****....  
-......****...***,......***...****....  
-......****....****...,***....****....  
-......****.....****.****.....****....  
-......****......*******......****....  
-  ....****.......****........****....  
-......****...................****....  
- .....****...................****....  
-  ....****...................****......
-  ....****...................****....  
-  `);
+  (``);
 
   currentPage = "about";
   var thisPage = currentPage;
@@ -498,7 +528,8 @@ function ViewWorkText()
 
     typewriter = new Typewriter('.typewriter', {
     loop: false,
-    delay: 0.0001
+    delay: 0.0001,
+    cursor: ''
     });
 
     typewriter.start();

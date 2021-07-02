@@ -131,8 +131,8 @@ header
 #skipButton
 {
     position: fixed;
-    bottom: 32px;
-    right: 60px;
+    bottom: 55px;
+    right: 70px;
     text-align: center;
     padding: 5px 16px;
     font-size: 25px;
@@ -140,16 +140,11 @@ header
     display: block;
 }
 
-.imgGroup .imgGroupProject
-{
-	-webkit-filter: grayscale(0) brightness(1);
-	filter: grayscale(0) brightness(1) drop-shadow(0px 0px 0px green);
-	transition: all 300ms ease;
+.projectHeader #static, .projectHeader:hover #animated {
+    display: inline;
 }
-.imgGroup:hover .imgGroupProject
-{
-	-webkit-filter: grayscale(1) brightness(0.5);
-	filter: grayscale(1) brightness(0.5) drop-shadow(2px 2px 4px green);
+.projectHeader #animated, .projectHeader:hover #static {
+    display: none;
 }
 
 .imgGroup:hover .projectText
@@ -202,6 +197,11 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.game-card
+{
+    background-color: black;
 }
 
 
