@@ -2,428 +2,309 @@ const activeClass = "active";
 var typewriter;
 var currentPage = "home";
 
-var contentArray = {"home" : `<h1>Hello, world!</h1><hr />
-I'm <b>Mateusz Kusionowicz</b>, a passionate game developer who loves to <b>plan out</b> ideas, <b>code</b> them and then <b>prototype</b> a lot.
-<br /><br />Got an interesting project? Send me a message at <a class='hyperlink' rel="noopener noreferrer" href='mailto:TheMatiaz0@protonmail.com'>TheMatiaz0@protonmail.com</a>.
-<br /><br />
-========================================================================
-<br /><a href="#" onclick="ChangeWebsiteTo('about')"><img src="images/numberone.png" width="50px" height="50px" class="img-rounded" alt="Option number one"></a> - Check information about my persona,
-<br /><a href="#" onclick="ChangeWebsiteTo('work')"><img src="images/numbertwo.png" width="50px" height="50px" class="img-rounded" alt="Option number two"></a> - See my work,
-<br /><a href="#" onclick="ChangeWebsiteTo('contact')"><img src="images/numberthree.png" width="50px" height="50px" class="img-rounded" alt="Option number three"></a> - Find out how to contact me.
-<br />========================================================================<br /><br />
-<i>(Choose an answer by typing the number below, you can also use buttons.)</i>`, 
-"about" : 
-`<h1>About Me:</h1><hr />
-I'm an independent game developer with 2 year experience, currently based in Cracow (Poland). I can work either stationary or remotely. <b>I'm always looking forward for new offers to work on, so if you got something, non-commercial or commercial send me an email</b>.<br />
-<br /><br /><h4>Skills:</h4><hr />
-<div class="container">
-      <div class="row">
-      <div class="col">
-      <strong class="listHeader">LANGUAGES</strong>
-      <ul>
-        <li>
-        C#
-        </li>
-        <li>
-        HTML5
-        </li>
-        <li>
-        CSS3
-        </li>
-        <li>
-        Python 3
-        </li>
-        <li>
-        JavaScript
-        </li>
-        <li>
-        Dart
-        </li>
-        <li>
-        Lua
-        </li>
-        <li>
-        English (B2 level) / Polish (native speaker)
-        </li>
-      </ul>
-      </div>
-      <div class="col">
-      <strong class="listHeader">FRAMEWORKS</strong>
-      <ul>
-        <li>
-        Unity
-        </li>
-        <li>
-        Clickteam Fusion 2.5
-        </li>
-        <li>
-        WPF/WinForms
-        </li>
-        <li>
-        Flutter
-        </li>
-      </ul>
-      </div>
-      <div class="col">
-      <strong class="listHeader">FIELDS</strong>
-      <ul>
-        <li>
-        Gameplay
-        </li>
-        <li>
-        User Interface
-        </li>
-        <li>
-        Scripting
-        </li>
-        <li>
-        Storytelling
-        </li>
-        <li>
-        Marketing
-        </li>
-      </ul>
-      </div>
-      </div>
-      </div>
-	  <br />====================================================================
-	  <br /><a href="#" onclick="ChangeWebsiteTo('home')"><img src="images/numberone.png" width="50px" height="50px" class="img-rounded" alt="Option number one"></a> - Go back to the beginning,
-      <br /><a href="#" onclick="ChangeWebsiteTo('work')"><img src="images/numbertwo.png" width="50px" height="50px" class="img-rounded" alt="Option number two"></a> - Check how I used skills in the work,
-      <br /><a href="#" onclick="ChangeWebsiteTo('contact')"><img src="images/numberthree.png" width="50px" height="50px" class="img-rounded" alt="Option number three"></a> - Find out how you can contact me.
-      <br />====================================================================<br /><br />
-`, "work" : `<h1>Featured projects:</h1><hr />
+var siteDictionary =
+{
+  "gamejolt.com" : "Game Jolt", 
+  "thematiaz0.itch.io" : "Itch.io",
+  "cyberevolver-studios.itch.io" : "Itch.io",
+  "cyberevolver_studios.indie.af" : "Game Website",
+  "github.com" : "GitHub (+ Source Code)"
+} 
+
+var EXTRAS = "<br /><br /><i>Loading all choices</i>";
+var HINT = `(<i>Choose an answer by typing the number below, you can also use buttons.</i>)`
+var BREAK = "<hr />"
+
+var HOME_PROMPT_0 = `<h1>Hello World!</h1><hr />`;
+var HOME_PROMPT_1 = `I'm <b>Mateusz Kusionowicz</b>, a passionate game developer who loves to <b>plan out</b> ideas, <b>code</b> them and then <b>prototype</b> a lot.`;
+var HOME_PROMPT_2 = `<br /><br />Got an interesting project? Send me a message at <a class='hyperlink' rel='noopener noreferrer' href='mailto:TheMatiaz0@protonmail.com'>TheMatiaz0@protonmail.com</a>.<br />`;
+var HOME_CHOICE_0 = `<a href="#" onclick="ChangeWebsiteTo('about')"><img src="images/numberone.png" width="50px" height="50px" class="img-rounded" alt="Option number one"></a> - Check information about my persona,`;
+var HOME_CHOICE_1 = `<br /><a href="#" onclick="ChangeWebsiteTo('work')"><img src="images/numbertwo.png" width="50px" height="50px" class="img-rounded" alt="Option number two"></a> - See my work,`;
+var HOME_CHOICE_2 = `<br /><a href="#" onclick="ChangeWebsiteTo('contact')"><img src="images/numberthree.png" width="50px" height="50px" class="img-rounded" alt="Option number three"></a> - Find out how to contact me.<hr />`;
+
+var ABOUT_PROMPT_0 = `<h1>About Me:</h1><hr />`;
+var ABOUT_PROMPT_1 = `I'm an independent game developer with 2 year experience, currently based in Cracow (Poland). I can work either stationary or remotely. <b>I'm always looking forward for new offers to work on, so if you got something, non-commercial or commercial send me an email</b>.<br />`;
+var ABOUT_PROMPT_2 = `<br /><br /><h4>Skills:</h4><hr />`;
+var ABOUT_PROMPT_3 = `<div class="container">
+<div class="row">
+<div class="col">
+<strong class="listHeader">LANGUAGES</strong>
+<ul>
+  <li>
+  C#
+  </li>
+  <li>
+  HTML5
+  </li>
+  <li>
+  CSS3
+  </li>
+  <li>
+  Python 3
+  </li>
+  <li>
+  JavaScript
+  </li>
+  <li>
+  Dart
+  </li>
+  <li>
+  Lua
+  </li>
+  <li>
+  English (B2 level) / Polish (native speaker)
+  </li>
+</ul>
+</div>
+<div class="col">
+<strong class="listHeader">FRAMEWORKS</strong>
+<ul>
+  <li>
+  Unity
+  </li>
+  <li>
+  Clickteam Fusion 2.5
+  </li>
+  <li>
+  WPF/WinForms
+  </li>
+  <li>
+  Flutter
+  </li>
+</ul>
+</div>
+<div class="col">
+<strong class="listHeader">FIELDS</strong>
+<ul>
+  <li>
+  Gameplay
+  </li>
+  <li>
+  User Interface
+  </li>
+  <li>
+  Scripting
+  </li>
+  <li>
+  Storytelling
+  </li>
+  <li>
+  Marketing
+  </li>
+</ul>
+</div>
+</div>
+</div>`;
+var ABOUT_CHOICE_0 = `<a href="#" onclick="ChangeWebsiteTo('home')"><img src="images/numberone.png" width="50px" height="50px" class="img-rounded" alt="Option number one"></a> - Go back to the beginning,`;
+var ABOUT_CHOICE_1 = `<br /><a href="#" onclick="ChangeWebsiteTo('work')"><img src="images/numbertwo.png" width="50px" height="50px" class="img-rounded" alt="Option number two"></a> - Check how I used skills in the work,`;
+var ABOUT_CHOICE_2 = `<br /><a href="#" onclick="ChangeWebsiteTo('contact')"><img src="images/numberthree.png" width="50px" height="50px" class="img-rounded" alt="Option number three"></a> - Find out how you can contact me.<hr />`;
+
+var WORK_PROMPT_0 = `<h1>Featured projects:</h1><hr />`;
+var WORK_PROMPT_1 = `
 <div class="container">
 <div class="row">
   <a href="#" onclick="ViewFirstProject()" class="col projectSquare projectSquare-center">
     <div class="projectHeader imgGroup">
-      <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="images/tt-thumbnail.png">
+      <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="./images/tt-thumbnail.png">
     </div>
   </a>
   <a href="#" onclick="ViewSecondProject()" class="col projectSquare projectSquare-center">
   <div class="projectHeader imgGroup">
-    <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="images/tgib-thumbnail.png">
+    <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="./images/tgib-thumbnail.png">
   </div>
 </a>
 </div>
 <div class="row">
   <a href="#" onclick="ViewThirdProject()" class="col projectSquare projectSquare-center">
     <div class="projectHeader imgGroup">
-      <img class="img-fluid img-rounded imgGroupProject" width="600" height="200" src="images/bp-thumbnail.png">
+      <img class="img-fluid img-rounded imgGroupProject" width="600" height="200" src="./images/bp-thumbnail.png">
     </div>
   </a>
 </div>
-<div class="row">
 <a href="#" onclick="ViewFourthProject()" class="col projectSquare projectSquare-center">
   <div class="projectHeader imgGroup">
-    <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="images/lc-thumbnail.png">
+    <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="./images/lc-thumbnail.png">
   </div>
 </a>
 </div>
-</div>
-</div>`, "contact" : `<h1>Contact Info:</h1><hr />
-Feel free to reach me at: <a rel="noopener noreferrer" href="mailto:TheMatiaz0@protonmail.com" class="hyperlink">TheMatiaz0@protonmail.com</a> or through LinkedIn at: <a class="hyperlink" target="_blank" rel="noopener" href="https://www.linkedin.com/in/mateusz-kusionowicz">https://www.linkedin.com/in/mateusz-kusionowicz</a>.
-<br /><br />=========================================================
-<br /><a rel="noopener noreferrer" href="mailto:TheMatiaz0@protonmail.com"><img src="images/numberone.png" width="50px" height="50px" class="img-rounded" alt="Option number one"></a> - Send me an email,
-<br /><a href="#" onclick="ChangeWebsiteTo('home')"><img src="images/numbertwo.png" width="50px" height="50px" class="img-rounded" alt="Option number two"></a> - Return back to the beginning.
-<br />=========================================================<br /><br />`, "firstProject" : `<h1>The Towerer</h1><br />
-<h4>Videos:</h4><hr />
-<div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item video" src="https://www.youtube.com/embed/dXxaLjlUU6M" frameborder="0" allowfullscreen></iframe>
-    </div><br />
-    <h4>Details:</h4><hr/>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <strong class="listHeader">ENGINE/LANGUAGE:</strong>
-          <ul>
-          <li>
-            Unity (C# language)
-          </li>
-          </ul>
-        </div>
-        <div class="col">
-          <strong class="listHeader">PLATFORMS:</strong>
-          <ul>
-          <li>
-            Windows, Linux
-          </li>
-          </ul>
-        </div>
-        <div class="col">
-          <strong class="listHeader">PROJECT LENGTH:</strong>
-          <ul>
-          <li>
-            7 months
-          </li>
-          </ul>
-        </div>
-        <div class="col">
-        <strong class="listHeader">PROJECT TYPE:</strong>
-        <ul>
-        <li>
-          Non-commercial, 5 people team
-        </li>
-        </ul>
-        </div>
-      </div>
-    </div><br />
-    <h4>What I did:</h4><hr />
-    <p>Programmed as a second programmer, mainly content and secondary mechanics. Designed majority of User Interface and some of the enemies (for ex. boss named Smiley Guy). Planned the approach to marketing, made all marketing assets (video, screenshots, etc), and wrote all the lore (including the ending monologue and story for possible prequels).</p>
-    <br /><h4>Images:</h4><hr />
+</div>`;
 
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/tt-screenshots/1.webp">
-        </div>
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/tt-screenshots/2.webp">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/tt-screenshots/3.webp">
-        </div>
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/tt-screenshots/4.webp">
-        </div>
-      </div>
-    </div><br /><br />
-    <h4>Published on:</h4><hr />
-    <div class="container">
-      <div class="row">
-        <div class="col footer-links">
-          <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://gamejolt.com/games/the-towerer/513680"><span class="text">Game Jolt</span></a> |</span>
-          <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://cyberevolver-studios.itch.io/the-towerer"><span class="text">Itch.io</span></a><span> |</span>
-          <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://cyberevolver_studios.indie.af/the-towerer"><span class="text">Game Website</span></a>
-        </div>
-      </div>
-      <hr /><br /><br />
-      <div class="row">
-        <a id="back" class="btn btn-success" onclick="ChangeWebsiteTo('work')" href="#">See more projects...</a> 
-      </div>
-    </div>
-</div>`, "secondProject" : `<h1>This Game Is Broken</h1><br />
-<h4>Videos:</h4><hr />
-<div class="embed-responsive embed-responsive-16by9">
-<iframe class="embed-responsive-item video" src="https://www.youtube.com/embed/BC3UiNOp7Wc" frameborder="0" allowfullscreen></iframe>
-</div><br />
-<h4>Details:</h4><hr/>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <strong class="listHeader">ENGINE/LANGUAGE:</strong>
-      <ul>
-      <li>
-        Unity (C# language)
-      </li>
-      </ul>
-    </div>
-    <div class="col">
-      <strong class="listHeader">PLATFORMS:</strong>
-      <ul>
-      <li>
-        Windows
-      </li>
-      </ul>
-    </div>
-    <div class="col">
-      <strong class="listHeader">PROJECT LENGTH:</strong>
-      <ul>
-      <li>
-        1 month (made initially on KrakJam during 48 hours)
-      </li>
-      </ul>
-    </div>
-    <div class="col">
-    <strong class="listHeader">PROJECT TYPE:</strong>
-    <ul>
-    <li>
-      Non-commercial, 4 people team
-    </li>
-    </ul>
-    </div>
-  </div>
-</div><br />
-<h4>What I did:</h4><hr />
-<p>Programmed huge amount of content to the game. Implemented post-processing. Managed the team in effective way and improved the design of the game.</p>
-<br /><h4>Images:</h4><hr />
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <img class="img-fluid gameImg" src="images/tgib-screenshots/1.webp">
-    </div>
-    <div class="col">
-      <img class="img-fluid gameImg" src="images/tgib-screenshots/2.webp">
-    </div>
-  </div>
-</div><br /><br />
-<h4>Published on:</h4><hr />
-<div class="container">
-  <div class="row">
-    <div class="col footer-links">
-      <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://gamejolt.com/games/this_game_is_broken/470676"><span class="text">Game Jolt</span></a> |</span>
-      <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://thematiaz0.itch.io/this-game-is-broken"><span class="text">Itch.io</span></a><span> |</span>
-      <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://github.com/TheMatiaz0/This-Game-Is-Broken"><span class="text">Source Code (GitHub)</span></a>
-    </div>
-  </div>
-  <hr /><br /><br />
-  <div class="row">
-    <a id="back" class="btn btn-success" onclick="ChangeWebsiteTo('work')" href="#">See more projects...</a> 
-  </div>
-</div>
-</div>`, "thirdProject" : `<h1>BluePlayer</h1><br />
-<h4>Details:</h4><hr/>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <strong class="listHeader">ENGINE/LANGUAGE:</strong>
-      <ul>
-      <li>
-        WPF (C# language)
-      </li>
-      </ul>
-    </div>
-    <div class="col">
-      <strong class="listHeader">PLATFORMS:</strong>
-      <ul>
-      <li>
-        Windows
-      </li>
-      </ul>
-    </div>
-    <div class="col">
-      <strong class="listHeader">PROJECT LENGTH:</strong>
-      <ul>
-      <li>
-        2 months
-      </li>
-      </ul>
-    </div>
-    <div class="col">
-    <strong class="listHeader">PROJECT TYPE:</strong>
-    <ul>
-    <li>
-      Non-commercial, one man team
-    </li>
-    </ul>
-    </div>
-  </div>
-</div><br />
-<h4>What I did:</h4><hr />
-<p>Programmed/designed/created entire software from beginning to the end, thanks to WPF and Material Design.</p>
-<br /><h4>Images:</h4><hr />
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <img class="img-fluid gameImg" src="images/bp-screenshots/1.gif">
-    </div>
-    <div class="col">
-      <img class="img-fluid gameImg" src="images/bp-screenshots/2.gif">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <img class="img-fluid gameImg" src="images/bp-screenshots/3.gif">
-    </div>
-    <div class="col">
-      <img class="img-fluid gameImg" src="images/bp-screenshots/4.gif">
-    </div>
-  </div>
-</div><br /><br />
-<h4>Published on:</h4><hr />
-<div class="container">
-  <div class="row">
-    <div class="col footer-links">
-      <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://github.com/TheMatiaz0/BluePlayer"><span class="text">GitHub (+ Source Code)</span></a>
-    </div>
-  </div>
-  <hr /><br /><br />
-  <div class="row">
-    <a id="back" class="btn btn-success" onclick="ChangeWebsiteTo('work')" href="#">See more projects...</a> 
-  </div>
-</div>
-</div>`, "fourthProject" : `<h1>Light Checkers</h1><br />
-<h4>Details:</h4><hr/>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <strong class="listHeader">ENGINE/LANGUAGE:</strong>
-      <ul>
-      <li>
-        Unity (C# language)
-      </li>
-      </ul>
-    </div>
-    <div class="col">
-      <strong class="listHeader">PLATFORMS:</strong>
-      <ul>
-      <li>
-        Windows, WebGL
-      </li>
-      </ul>
-    </div>
-    <div class="col">
-      <strong class="listHeader">PROJECT LENGTH:</strong>
-      <ul>
-      <li>
-        3 months
-      </li>
-      </ul>
-    </div>
-    <div class="col">
-    <strong class="listHeader">PROJECT TYPE:</strong>
-    <ul>
-    <li>
-      Non-commercial, one man team
-    </li>
-    </ul>
-    </div>
-  </div>
-</div><br />
-<h4>What I did:</h4><hr />
-<p>Programmed/designed/created entire game from beginning to the end (based on the Checkers game).</p>
-<br /><h4>Images:</h4><hr />
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <img class="img-fluid gameImg" src="images/lc-screenshots/1.gif">
-    </div>
-    <div class="col">
-      <img class="img-fluid gameImg" src="images/lc-screenshots/2.png">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <img class="img-fluid gameImg" src="images/lc-screenshots/3.gif">
-    </div>
-    <div class="col">
-      <img class="img-fluid gameImg" src="images/lc-screenshots/4.png">
-    </div>
-  </div>
-</div><br /><br />
-<h4>Published on:</h4><hr />
-<div class="container">
-  <div class="row">
-    <div class="col footer-links">
-      <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://gamejolt.com/games/Light_Checkers/579087"><span class="text">Game Jolt</span></a> |</span>
-      <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://github.com/TheMatiaz0/Light-Checkers"><span class="text">Source Code (GitHub)</span></a>
-    </div>
-  </div>
-  <hr /><br /><br />
-  <div class="row">
-    <a id="back" class="btn btn-success" onclick="ChangeWebsiteTo('work')" href="#">See more projects...</a> 
-  </div>
-</div>
-</div>`};
+var CONTACT_PROMPT_0 = `<h1>Contact Info:</h1><hr />`;
+var CONTACT_PROMPT_1 = `Feel free to reach me at: <a rel="noopener noreferrer" href="mailto:TheMatiaz0@protonmail.com" class="hyperlink">TheMatiaz0@protonmail.com</a> or through LinkedIn at: <a class="hyperlink" target="_blank" rel="noopener" href="https://www.linkedin.com/in/mateusz-kusionowicz">https://www.linkedin.com/in/mateusz-kusionowicz</a>.<br />`;
+var CONTACT_CHOICE_0 = `<a rel="noopener noreferrer" href="mailto:TheMatiaz0@protonmail.com"><img src="images/numberone.png" width="50px" height="50px" class="img-rounded" alt="Option number one"></a> - Send me an email,`;
+var CONTACT_CHOICE_1 = `<br /><a href="#" onclick="ChangeWebsiteTo('home')"><img src="images/numbertwo.png" width="50px" height="50px" class="img-rounded" alt="Option number two"></a> - Return back to the beginning.<hr />`;
+
+var HOME_FINAL = HOME_PROMPT_0 + HOME_PROMPT_1 + HOME_PROMPT_2 + BREAK + HOME_CHOICE_0 + HOME_CHOICE_1 + HOME_CHOICE_2 + HINT;
+var ABOUT_FINAL = ABOUT_PROMPT_0 + ABOUT_PROMPT_1 + ABOUT_PROMPT_2 + ABOUT_PROMPT_3 + BREAK + ABOUT_CHOICE_0 + ABOUT_CHOICE_1 + ABOUT_CHOICE_2; 
+var WORK_FINAL = WORK_PROMPT_0 + WORK_PROMPT_1;
+var CONTACT_FINAL = CONTACT_PROMPT_0 + CONTACT_PROMPT_1 + BREAK + CONTACT_CHOICE_0 + CONTACT_CHOICE_1;
+
+var FIRST_PROJECT = SetupGamePage("The Towerer", "https://www.youtube.com/embed/dXxaLjlUU6M", "Unity (C# language)", "Windows, Linux", "7 months", "Non-commercial, 5 people team", 
+"Programmed as a second programmer, mainly content and secondary mechanics. Designed majority of User Interface and some of the enemies (for ex. boss named Smiley Guy). Planned the approach to marketing, made all marketing assets (video, screenshots, etc), and wrote all the lore (including the ending monologue and story for possible prequels).", 
+["images/tt-screenshots/1.webp", "images/tt-screenshots/2.webp", "images/tt-screenshots/3.webp", "images/tt-screenshots/4.webp"], 
+["https://gamejolt.com/games/the-towerer/513680", "https://cyberevolver-studios.itch.io/the-towerer", "https://cyberevolver_studios.indie.af/the-towerer"]);
+
+var SECOND_PROJECT = SetupGamePage("This Game Is Broken", "https://www.youtube.com/embed/BC3UiNOp7Wc", "Unity (C# language)", "Windows, Android", "1 month (made initially on KrakJam during 48 hours)", "Non-commercial, 4 people team", 
+"Programmed huge amount of content to the game. Implemented post-processing. Managed the team in effective way and improved the design of the game.", 
+["images/tgib-screenshots/1.webp", "images/tgib-screenshots/2.webp"], 
+["https://gamejolt.com/games/this_game_is_broken/470676", "https://thematiaz0.itch.io/this-game-is-broken", "https://github.com/TheMatiaz0/This-Game-Is-Broken"]);
+
+var THIRD_PROJECT = SetupGamePage("BluePlayer", null, "WPF (C# language)", "Windows", "2 months", "Non-commercial, solo", 
+"Programmed/designed/created entire software from beginning to the end, based on WPF and Material Design.", 
+["images/bp-screenshots/1.gif", "images/bp-screenshots/2.gif", "images/bp-screenshots/3.gif", "images/bp-screenshots/4.gif"], 
+["https://github.com/TheMatiaz0/BluePlayer"]);
+
+var FOURTH_PROJECT = SetupGamePage("Light Checkers", null, "Unity (C# language)", "Windows, WebGL", "3 months", "Non-commercial, solo", 
+"Programmed/designed/created entire game from beginning to the end (based on classical Checkers game).", 
+["images/lc-screenshots/1.gif", "images/lc-screenshots/2.png", "images/lc-screenshots/3.gif", "images/lc-screenshots/4.png"], 
+["https://gamejolt.com/games/Light_Checkers/579087", "https://github.com/TheMatiaz0/Light-Checkers"]);
 
 
+var contentArray = 
+{"home" : HOME_FINAL, 
+"about" : ABOUT_FINAL, 
+"work" : WORK_FINAL,
+"contact" : CONTACT_FINAL, 
+"firstProject" : FIRST_PROJECT,
+"secondProject" : SECOND_PROJECT,
+"thirdProject" : THIRD_PROJECT, 
+"fourthProject" : FOURTH_PROJECT};
 
 $(document).ready(function()
 {
   ViewHomeText();
 });
 
+
+function SetupGamePage(title, ytURL, engine, platform, length, type, done, imgSrcs, downloads)
+{
+  final0 = `<h1>${title}</h1><br />
+  `
+  if (ytURL == null)
+  {
+    video1 = "";
+  }
+
+  else
+  {
+    video1 = `
+    <h4>Videos:</h4><hr />
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item video" src="${ytURL}" frameborder="0" allowfullscreen></iframe>
+        </div><br />`;
+  }
+
+      final1 = `
+      <h4>Details:</h4><hr/>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <strong class="listHeader">ENGINE/LANGUAGE:</strong>
+            <ul>
+            <li>
+              ${engine}
+            </li>
+            </ul>
+          </div>
+          <div class="col">
+            <strong class="listHeader">PLATFORMS:</strong>
+            <ul>
+            <li>
+              ${platform}
+            </li>
+            </ul>
+          </div>
+          <div class="col">
+            <strong class="listHeader">PROJECT LENGTH:</strong>
+            <ul>
+            <li>
+              ${length}
+            </li>
+            </ul>
+          </div>
+          <div class="col">
+          <strong class="listHeader">PROJECT TYPE:</strong>
+          <ul>
+          <li>
+            ${type}
+          </li>
+          </ul>
+          </div>
+        </div>
+      </div><br />
+      <h4>What I did:</h4><hr />
+      <p>${done}</p>
+      <br /><h4>Images:</h4><hr />
+  
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <img class="img-fluid gameImg" src="${imgSrcs[0]}">
+          </div>
+          <div class="col">
+            <img class="img-fluid gameImg" src="${imgSrcs[1]}">
+          </div>
+        </div>
+        `
+
+      if (imgSrcs.length > 2)
+      {
+        imgArr2 = 
+        `
+        <div class="row">
+          <div class="col">
+            <img class="img-fluid gameImg" src="${imgSrcs[2]}">
+          </div>
+          <div class="col">
+            <img class="img-fluid gameImg" src="${imgSrcs[3]}">
+          </div>
+        </div>
+      `
+      }
+      else
+      {
+        imgArr2 = "";
+      }
+
+      final3 = 
+      `
+      </div><br /><br />
+      <h4>Published on:</h4><hr />
+      <div class="container">
+        <div class="row">
+          <div class="col footer-links">
+          `
+          links = ""
+          i = 0
+          while (i < downloads.length)
+          {
+            let domain = (new URL(downloads[i]))
+            let domainHost = domain.hostname.replace('www.', '')
+            let trueHost = siteDictionary[domainHost];
+
+            if (i + 1 == downloads.length)
+            {
+              links += `<a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="${domain}"><span class="text">${(trueHost)}</span></a></span>`;
+              break;
+            }
+
+            links += `<a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="${domain}"><span class="text">${(trueHost)}</span></a> | </span>`;
+            i++;
+          }
+
+          final4 = 
+          `
+          </div>
+        </div>
+        <hr /><br /><br />
+        <div class="row">
+          <a id="back" class="btn btn-success" onclick="ChangeWebsiteTo('work')" href="#">See more projects...</a> 
+        </div>
+      </div>
+  </div>`;
+
+  return final0 + video1 + final1 + imgArr2 + final3 + links + final4;
+}
 
 function PickChoice(text, dict)
 {
@@ -509,17 +390,13 @@ c::;,'..      ..;oddddoodxOl.   :0NNNNNXKkolllllodOK000OOOOO
 ,'.  ....             .;cOx. .....     .,xKXXKxc:::cccox0K0O
   `);
 
-typewriter.typeString(`<h1>Hello, world!</h1><hr />`)
-    .typeString(
-        `I'm <b>Mateusz Kusionowicz</b>, a passionate game developer who loves to <b>plan out</b> ideas, <b>code</b> them and then <b>prototype</b> a lot.`
-        )
+typewriter.typeString(HOME_PROMPT_0)
+    .typeString(HOME_PROMPT_1)
     .pauseFor(90)
-    .typeString(
-        "<br /><br />Got an interesting project? Send me a message at <a class='hyperlink' rel='noopener noreferrer' href='mailto:TheMatiaz0@protonmail.com'>TheMatiaz0@protonmail.com</a>."
-        )
+    .typeString(HOME_PROMPT_2)
     .pauseFor(20)
     .changeDelay(1)
-    .typeString("<br /><br /><i>Loading all choices</i>")
+    .typeString(EXTRAS)
     .pauseFor(6)
     .typeString(".")
     .pauseFor(7)
@@ -527,26 +404,19 @@ typewriter.typeString(`<h1>Hello, world!</h1><hr />`)
     .pauseFor(3)
     .typeString(".")
     .deleteChars(23)
-    .typeString(`<br /><br />==========================================================================`)
-    .typeString(
-        `<br /><a href="#" onclick="ChangeWebsiteTo('about')"><img src="images/numberone.png" width="50px" height="50px" class="img-rounded" alt="Option number one"></a> - Check information about my persona,`
-        )
+    .typeString(BREAK)
+    .pauseFor(60)
+    .typeString(HOME_CHOICE_0)
     .pauseFor(125)
-    .typeString(
-        `<br /><a href="#" onclick="ChangeWebsiteTo('work')"><img src="images/numbertwo.png" width="50px" height="50px" class="img-rounded" alt="Option number two"></a> - See my work,`
-        )
+    .typeString(HOME_CHOICE_1)
     .pauseFor(125)
-    .typeString(
-        `<br /><a href="#" onclick="ChangeWebsiteTo('contact')"><img src="images/numberthree.png" width="50px" height="50px" class="img-rounded" alt="Option number three"></a> - Find out how to contact me.`
-        )
+    .typeString(HOME_CHOICE_2)
     .callFunction(() => {
         DownInputVisible(thisPage);
     })
     .changeDelay(1)
-    .typeString(`<br />==========================================================================<br /><br />`)
     .pauseFor(400)
-    .typeString(
-        `(<i>Choose an answer by typing the number below, you can also use buttons.</i>)`)
+    .typeString(HINT)
     .callFunction(() => hideTextAfterWrite(thisPage)).start();
 }
 
@@ -578,8 +448,6 @@ function ViewAboutMeText()
 
   currentPage = "about";
   var thisPage = currentPage;
-  
-  // typewriter = null;
 
   typewriter = new Typewriter('.typewriter', {
     loop: false,
@@ -587,84 +455,13 @@ function ViewAboutMeText()
     deleteSpeed: 1
 });
 
-  // typewriter.start();
-
-  typewriter.typeString(`<h1>About Me:</h1><hr />`)
-      .typeString(`I'm an independent game developer with 2 year experience, currently based in Cracow (Poland). I can work either stationary or remotely. <b>I'm always looking forward for new offers to work on, so if you got something, non-commercial or commercial send me an email</b>.<br />`)
+  typewriter.typeString(ABOUT_PROMPT_0)
+      .typeString(ABOUT_PROMPT_1)
       .pauseFor(30)
-      .typeString(`<br /><br /><h4>Skills:</h4><hr />`)
-      .typeString(`<div class="container">
-      <div class="row">
-      <div class="col">
-      <strong class="listHeader">LANGUAGES</strong>
-      <ul>
-        <li>
-        C#
-        </li>
-        <li>
-        HTML5
-        </li>
-        <li>
-        CSS3
-        </li>
-        <li>
-        Python 3
-        </li>
-        <li>
-        JavaScript
-        </li>
-        <li>
-        Dart
-        </li>
-        <li>
-        Lua
-        </li>
-        <li>
-        English (B2 level) / Polish (native speaker)
-        </li>
-      </ul>
-      </div>
-      <div class="col">
-      <strong class="listHeader">FRAMEWORKS</strong>
-      <ul>
-        <li>
-        Unity
-        </li>
-        <li>
-        Clickteam Fusion 2.5
-        </li>
-        <li>
-        WPF/WinForms
-        </li>
-        <li>
-        Flutter
-        </li>
-      </ul>
-      </div>
-      <div class="col">
-      <strong class="listHeader">FIELDS</strong>
-      <ul>
-        <li>
-        Gameplay
-        </li>
-        <li>
-        User Interface
-        </li>
-        <li>
-        Scripting
-        </li>
-        <li>
-        Storytelling
-        </li>
-        <li>
-        Marketing
-        </li>
-      </ul>
-      </div>
-      </div>
-      </div>`)
+      .typeString(ABOUT_PROMPT_2)
+      .typeString(ABOUT_PROMPT_3)
       .changeDelay(1)
-      .typeString("<br /><br /><i>Loading all choices</i>")
+      .typeString(EXTRAS)
       .pauseFor(6)
       .typeString(".")
       .pauseFor(7)
@@ -672,23 +469,17 @@ function ViewAboutMeText()
       .pauseFor(3)
       .typeString(".")
       .deleteChars(23)
-      .typeString(`<br />=================================================================`)
+      .typeString(BREAK)
+      .pauseFor(60)
       .callFunction(() => {
         DownInputVisible(thisPage);
       })
-      .typeString(
-          `<br /><a href="#" onclick="ChangeWebsiteTo('home')"><img src="images/numberone.png" width="50px" height="50px" class="img-rounded" alt="Option number one"></a> - Go back to the beginning,`
-          )
+      .typeString(ABOUT_CHOICE_0)
       .pauseFor(125)
-      .typeString(
-          `<br /><a href="#" onclick="ChangeWebsiteTo('work')"><img src="images/numbertwo.png" width="50px" height="50px" class="img-rounded" alt="Option number two"></a> - Check how I used skills in the work,`
-          )
+      .typeString(ABOUT_CHOICE_1)
       .pauseFor(125)
-      .typeString(
-          `<br /><a href="#" onclick="ChangeWebsiteTo('contact')"><img src="images/numberthree.png" width="50px" height="50px" class="img-rounded" alt="Option number three"></a> - Find out how you can contact me.`
-          )
+      .typeString(ABOUT_CHOICE_2)
       .changeDelay(1)
-      .typeString(`<br />=================================================================<br /><br />`)
       .callFunction(() => hideTextAfterWrite(thisPage)).start();
 }
 
@@ -699,14 +490,11 @@ function ViewWorkText()
     $(".artColumn").css('visibility', 'hidden');
     $(".typeColumn").removeClass('col');
     $(".artColumn").removeClass('col');
-    // $(".downInput").attr('oninput', 'PickChoice($(".downInput").val(), { 1: function() { ChangeWebsiteTo("firstProject"); }, 2: function() { ChangeWebsiteTo("secondProject"); }, 3: function() { ChangeWebsiteTo("thirdProject"); }, 4: function() {ChangeWebsiteTo("home");} });')
 
     currentPage = "work";
     var thisPage = currentPage;
 
     $(`.ascii-art`).text(``);
-
-    // typewriter = null;
 
     typewriter = new Typewriter('.typewriter', {
     loop: false,
@@ -715,36 +503,8 @@ function ViewWorkText()
 
     typewriter.start();
 
-    typewriter.typeString(`<h1>Featured projects:</h1><hr />`)
-    .typeString(`
-    <div class="container">
-    <div class="row">
-      <a href="#" onclick="ViewFirstProject()" class="col projectSquare projectSquare-center">
-        <div class="projectHeader imgGroup">
-          <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="./images/tt-thumbnail.png">
-        </div>
-      </a>
-      <a href="#" onclick="ViewSecondProject()" class="col projectSquare projectSquare-center">
-      <div class="projectHeader imgGroup">
-        <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="./images/tgib-thumbnail.png">
-      </div>
-    </a>
-    </div>
-    <div class="row">
-      <a href="#" onclick="ViewThirdProject()" class="col projectSquare projectSquare-center">
-        <div class="projectHeader imgGroup">
-          <img class="img-fluid img-rounded imgGroupProject" width="600" height="200" src="./images/bp-thumbnail.png">
-        </div>
-      </a>
-    </div>
-    <a href="#" onclick="ViewFourthProject()" class="col projectSquare projectSquare-center">
-      <div class="projectHeader imgGroup">
-        <img class="img-fluid img-rounded imgGroupProject" width="600" height="350" src="./images/lc-thumbnail.png">
-      </div>
-    </a>
-    </div>
-    </div>
-    `)
+    typewriter.typeString(WORK_PROMPT_0)
+    .typeString(WORK_PROMPT_1)
     .callFunction(() => hideTextAfterWrite(thisPage)).start();
 }
 
@@ -761,88 +521,7 @@ function ViewFirstProject()
     delay: 1
   });
 
-  //typewriter.start();
-
-    typewriter.typeString(`<h1>The Towerer</h1><br />`)
-    .typeString(`<h4>Videos:</h4><hr />`)
-    .typeString(`<div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item video" src="https://www.youtube.com/embed/dXxaLjlUU6M" frameborder="0" allowfullscreen></iframe>
-    </div><br />
-    <h4>Details:</h4><hr/>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <strong class="listHeader">ENGINE/LANGUAGE:</strong>
-          <ul>
-          <li>
-            Unity (C# language)
-          </li>
-          </ul>
-        </div>
-        <div class="col">
-          <strong class="listHeader">PLATFORMS:</strong>
-          <ul>
-          <li>
-            Windows, Linux
-          </li>
-          </ul>
-        </div>
-        <div class="col">
-          <strong class="listHeader">PROJECT LENGTH:</strong>
-          <ul>
-          <li>
-            7 months
-          </li>
-          </ul>
-        </div>
-        <div class="col">
-        <strong class="listHeader">PROJECT TYPE:</strong>
-        <ul>
-        <li>
-          Non-commercial, 5 people team
-        </li>
-        </ul>
-        </div>
-      </div>
-    </div><br />
-    <h4>What I did:</h4><hr />
-    <p>Programmed as a second programmer, mainly content and secondary mechanics. Designed majority of User Interface and some of the enemies (for ex. boss named Smiley Guy). Planned the approach to marketing, made all marketing assets (video, screenshots, etc), and wrote all the lore (including the ending monologue and story for possible prequels).</p>
-    <br /><h4>Images:</h4><hr />
-
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/tt-screenshots/1.webp">
-        </div>
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/tt-screenshots/2.webp">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/tt-screenshots/3.webp">
-        </div>
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/tt-screenshots/4.webp">
-        </div>
-      </div>
-    </div><br /><br />
-    <h4>Published on:</h4><hr />
-    <div class="container">
-      <div class="row">
-        <div class="col footer-links">
-          <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://gamejolt.com/games/the-towerer/513680"><span class="text">Game Jolt</span></a> |</span>
-          <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://cyberevolver-studios.itch.io/the-towerer"><span class="text">Itch.io</span></a><span> |</span>
-          <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://cyberevolver_studios.indie.af/the-towerer"><span class="text">Game Website</span></a>
-        </div>
-      </div>
-      <hr /><br /><br />
-      <div class="row">
-        <a id="back" class="btn btn-success" onclick="ChangeWebsiteTo('work')" href="#">See more projects...</a> 
-      </div>
-    </div>
-    </div>
-    `)
+    typewriter.typeString(FIRST_PROJECT)
     .callFunction(() => hideTextAfterWrite(thisPage)).start();
 }
 
@@ -859,79 +538,7 @@ function ViewSecondProject()
     delay: 1
   });
 
-  //typewriter.start();
-
-    typewriter.typeString(`<h1>This Game Is Broken</h1><br />`)
-    .typeString(`<h4>Videos:</h4><hr />`)
-    .typeString(`<div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item video" src="https://www.youtube.com/embed/BC3UiNOp7Wc" frameborder="0" allowfullscreen></iframe>
-    </div><br />
-    <h4>Details:</h4><hr/>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <strong class="listHeader">ENGINE/LANGUAGE:</strong>
-          <ul>
-          <li>
-            Unity (C# language)
-          </li>
-          </ul>
-        </div>
-        <div class="col">
-          <strong class="listHeader">PLATFORMS:</strong>
-          <ul>
-          <li>
-            Windows
-          </li>
-          </ul>
-        </div>
-        <div class="col">
-          <strong class="listHeader">PROJECT LENGTH:</strong>
-          <ul>
-          <li>
-            1 month (made initially on KrakJam during 48 hours)
-          </li>
-          </ul>
-        </div>
-        <div class="col">
-        <strong class="listHeader">PROJECT TYPE:</strong>
-        <ul>
-        <li>
-          Non-commercial, 4 people team
-        </li>
-        </ul>
-        </div>
-      </div>
-    </div><br />
-    <h4>What I did:</h4><hr />
-    <p>Programmed huge amount of content to the game. Implemented post-processing. Managed the team in effective way and improved the design of the game.</p>
-    <br /><h4>Images:</h4><hr />
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/tgib-screenshots/1.webp">
-        </div>
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/tgib-screenshots/2.webp">
-        </div>
-      </div>
-    </div><br /><br />
-    <h4>Published on:</h4><hr />
-    <div class="container">
-      <div class="row">
-        <div class="col footer-links">
-          <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://gamejolt.com/games/this_game_is_broken/470676"><span class="text">Game Jolt</span></a> |</span>
-          <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://thematiaz0.itch.io/this-game-is-broken"><span class="text">Itch.io</span></a><span> |</span>
-          <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://github.com/TheMatiaz0/This-Game-Is-Broken"><span class="text">Source Code (GitHub)</span></a>
-        </div>
-      </div>
-      <hr /><br /><br />
-      <div class="row">
-        <a id="back" class="btn btn-success" onclick="ChangeWebsiteTo('work')" href="#">See more projects...</a> 
-      </div>
-    </div>
-    </div>
-    `)
+    typewriter.typeString(SECOND_PROJECT)
     .callFunction(() => hideTextAfterWrite(thisPage)).start();
 }
 
@@ -948,82 +555,7 @@ function ViewThirdProject()
     delay: 1
   });
 
-  //typewriter.start();
-
-    typewriter.typeString(`<h1>BluePlayer</h1><br />`)
-    .typeString(`
-    <h4>Details:</h4><hr/>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <strong class="listHeader">ENGINE/LANGUAGE:</strong>
-          <ul>
-          <li>
-            WPF (C# language)
-          </li>
-          </ul>
-        </div>
-        <div class="col">
-          <strong class="listHeader">PLATFORMS:</strong>
-          <ul>
-          <li>
-            Windows
-          </li>
-          </ul>
-        </div>
-        <div class="col">
-          <strong class="listHeader">PROJECT LENGTH:</strong>
-          <ul>
-          <li>
-            2 months
-          </li>
-          </ul>
-        </div>
-        <div class="col">
-        <strong class="listHeader">PROJECT TYPE:</strong>
-        <ul>
-        <li>
-          Non-commercial, one man team
-        </li>
-        </ul>
-        </div>
-      </div>
-    </div><br />
-    <h4>What I did:</h4><hr />
-    <p>Programmed/designed/created entire software from beginning to the end, thanks to WPF and Material Design.</p>
-    <br /><h4>Images:</h4><hr />
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/bp-screenshots/1.gif">
-        </div>
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/bp-screenshots/2.gif">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/bp-screenshots/3.gif">
-        </div>
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/bp-screenshots/4.gif">
-        </div>
-      </div>
-    </div><br /><br />
-    <h4>Published on:</h4><hr />
-    <div class="container">
-      <div class="row">
-        <div class="col footer-links">
-          <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://github.com/TheMatiaz0/BluePlayer"><span class="text">GitHub (+ Source Code)</span></a>
-        </div>
-      </div>
-      <hr /><br /><br />
-      <div class="row">
-        <a id="back" class="btn btn-success" onclick="ChangeWebsiteTo('work')" href="#">See more projects...</a> 
-      </div>
-    </div>
-    </div>
-    `)
+    typewriter.typeString(THIRD_PROJECT)
     .callFunction(() => hideTextAfterWrite(thisPage)).start();
 }
 
@@ -1040,83 +572,7 @@ function ViewFourthProject()
     delay: 1
   });
 
-  //typewriter.start();
-
-    typewriter.typeString(`<h1>Light Checkers</h1><br />`)
-    .typeString(`
-    <h4>Details:</h4><hr/>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <strong class="listHeader">ENGINE/LANGUAGE:</strong>
-          <ul>
-          <li>
-            Unity (C# language)
-          </li>
-          </ul>
-        </div>
-        <div class="col">
-          <strong class="listHeader">PLATFORMS:</strong>
-          <ul>
-          <li>
-            Windows, WebGL
-          </li>
-          </ul>
-        </div>
-        <div class="col">
-          <strong class="listHeader">PROJECT LENGTH:</strong>
-          <ul>
-          <li>
-            3 months
-          </li>
-          </ul>
-        </div>
-        <div class="col">
-        <strong class="listHeader">PROJECT TYPE:</strong>
-        <ul>
-        <li>
-          Non-commercial, one man team
-        </li>
-        </ul>
-        </div>
-      </div>
-    </div><br />
-    <h4>What I did:</h4><hr />
-    <p>Programmed/designed/created entire game from beginning to the end (based on the Checkers game).</p>
-    <br /><h4>Images:</h4><hr />
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/lc-screenshots/1.gif">
-        </div>
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/lc-screenshots/2.png">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/lc-screenshots/3.gif">
-        </div>
-        <div class="col">
-          <img class="img-fluid gameImg" src="images/lc-screenshots/4.png">
-        </div>
-      </div>
-    </div><br /><br />
-    <h4>Published on:</h4><hr />
-    <div class="container">
-      <div class="row">
-        <div class="col footer-links">
-          <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://gamejolt.com/games/Light_Checkers/579087"><span class="text">Game Jolt</span></a> |</span>
-          <a class="hyperlink disableUnderline" rel="noopener" target="_blank" href="https://github.com/TheMatiaz0/Light-Checkers"><span class="text">Source Code (GitHub)</span></a>
-        </div>
-      </div>
-      <hr /><br /><br />
-      <div class="row">
-        <a id="back" class="btn btn-success" onclick="ChangeWebsiteTo('work')" href="#">See more projects...</a> 
-      </div>
-    </div>
-    </div>
-    `)
+    typewriter.typeString(FOURTH_PROJECT)
     .callFunction(() => hideTextAfterWrite(thisPage)).start();
 }
 
@@ -1162,12 +618,11 @@ $(`.ascii-art`).text(
    .*#%%%%%%%%%%%%%%&@@@@@@@@@@@@@@@@&&%%%%%%%%%%%%%%(,  
                                                   
 `);
-// typewriter.start();
 
-typewriter.typeString(`<h1>Contact Info:</h1><hr />`)
-          .typeString(`Feel free to reach me at: <a rel="noopener noreferrer" href="mailto:TheMatiaz0@protonmail.com" class="hyperlink">TheMatiaz0@protonmail.com</a> or through LinkedIn at: <a class="hyperlink" target="_blank" rel="noopener" href="https://www.linkedin.com/in/mateusz-kusionowicz">https://www.linkedin.com/in/mateusz-kusionowicz</a>.`)
+typewriter.typeString(CONTACT_PROMPT_0)
+          .typeString(CONTACT_PROMPT_1)
           .changeDelay(1)
-          .typeString("<br /><br /><i>Loading all choices</i>")
+          .typeString(EXTRAS)
           .pauseFor(6)
           .typeString(".")
           .pauseFor(7)
@@ -1175,18 +630,14 @@ typewriter.typeString(`<h1>Contact Info:</h1><hr />`)
           .pauseFor(3)
           .typeString(".")
           .deleteChars(23)
-          .typeString(`<br />=========================================================`)
+          .typeString(BREAK)
+          .pauseFor(60)
           .callFunction(() => {
             DownInputVisible(thisPage);
           })
-          .typeString(
-              `<br /><a rel="noopener noreferrer" href="mailto:TheMatiaz0@protonmail.com"><img src="images/numberone.png" width="50px" height="50px" class="img-rounded" alt="Option number one"></a> - Send me an email,`
-              )
+          .typeString(CONTACT_CHOICE_0)
           .pauseFor(125)
-          .typeString(
-              `<br /><a href="#" onclick="ChangeWebsiteTo('home')"><img src="images/numbertwo.png" width="50px" height="50px" class="img-rounded" alt="Option number two"></a> - Return back to the beginning.`
-              )
-          .typeString(`<br />=========================================================<br /><br />`)
+          .typeString(CONTACT_CHOICE_1)
           .callFunction(() => hideTextAfterWrite(thisPage)).start();
 }
 
