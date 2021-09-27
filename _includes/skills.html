@@ -6,10 +6,10 @@
     <div class="row">
       {% for skill in site.data.skills.skill %}
       <div class="col text-center">
-        <h4 class="skill-header">{{skill.category[page.language]}}</h4>
+        <p class="skill-header">{{skill.category[page.language]}}</p>
         {% for language in skill.subskill %}
         <a type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="{{language.time[page.language]}}">
-          <img class="{% if language.lang == true %} skill-flag-img {% else %} skill-img {% endif %}" src="{{ base.url | prepend: site.url }}/{{language.img-url}}">
+          <img alt="{{language.title[page.language]}}" class="{% if language.lang == true %} skill-flag-img {% else %} skill-img {% endif %}" src="{{ base.url | prepend: site.url }}/{{language.img-url}}">
           <p class="skill-text">{% if language.lang == true %} {{language.title[page.language]}} {% else %} {{language.title}} {% endif %}</p>
         </a>
         {% endfor %}

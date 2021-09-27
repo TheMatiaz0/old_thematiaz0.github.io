@@ -7,15 +7,12 @@
                 <span>© 2021 Mateusz Kusionowicz</span>
             </div>
             <div class="col-lg-4 nowrap text-center text-lg-end align-self-center">
+
                 <nav class="social-media">
-                    <a class="social-media-btn" href="mailto:mateusz.kusionowicz@protonmail.com" target="_blank"
-                        aria-label="mateusz.kusionowicz@protonmail.com"><i class="far fa-envelope footer-media"></i></a>
-                    <a class="social-media-btn" href="https://www.linkedin.com/in/mateusz-kusionowicz" target="_blank"
-                        aria-label="Mateusz Kusionowicz"><i class="fab fa-linkedin-in footer-media"></i></a>
-                    <a class="social-media-btn" href="https://github.com/TheMatiaz0" target="_blank"
-                        aria-label="Mateusz Kusionowicz"><i class="fab fa-github footer-media"></i></a>
-                    <a class="social-media-btn" href="https://twitter.com/thematiaz0" target="_blank"
-                        aria-label="Mateusz Kusionowicz"><i class="fab fa-twitter footer-media"></i></a>
+                    {% for media in site.data.social-media %}
+                    <a rel="noopener" class="social-media-btn" href="{{media.url}}" target="_blank"
+                      aria-label="{{media.label}}"><i class="{{media.icon}}"></i></a>
+                  {% endfor %}
                 </nav>
             </div>
         </div>

@@ -4,12 +4,12 @@ skill:
       pl: JĘZYKI
     subskill:
       - title: 'C#'
-        img-url: assets/images/csharp.png
+        img-url: assets/images/csharp.webp
         time:
           en: 2 years of experience
           pl: 2 lata doświadczenia
       - title: Python
-        img-url: assets/images/python.png
+        img-url: assets/images/python.webp
         time:
           en: 1 year of experience
           pl: Rok doświadczenia
@@ -18,7 +18,7 @@ skill:
       pl: SILNIKI
     subskill:
       - title: Unity
-        img-url: assets/images/unity.png
+        img-url: assets/images/unity.webp
         time:
           en: 3 years of experience
           pl: 3 lata doświadczenia
@@ -27,17 +27,17 @@ skill:
       pl: PROGRAMY
     subskill:
       - title: Visual Studio
-        img-url: assets/images/vs.png
+        img-url: assets/images/vs.webp
         time: 
           en: 3 years of experience
           pl: 3 lata doświadczenia
       - title: Git
-        img-url: assets/images/git.png
+        img-url: assets/images/git.webp
         time:
           en: 3 years of experience
           pl: 3 lata doświadczenia
       - title: Inkscape
-        img-url: assets/images/inkscape.png
+        img-url: assets/images/inkscape.webp
         time: 
           en: 1 year of experience
           pl: Rok doświadczenia
@@ -48,7 +48,7 @@ skill:
       - title:
           en: Polish
           pl: Polski
-        img-url: assets/images/pol.png
+        img-url: assets/images/pol.webp
         time: 
           en: Native
           pl: Ojczysty
@@ -56,7 +56,7 @@ skill:
       - title: 
           en: English
           pl: Angielski
-        img-url: assets/images/eng.png
+        img-url: assets/images/eng.webp
         time:
           en: C1 Level
           pl: Poziom C1

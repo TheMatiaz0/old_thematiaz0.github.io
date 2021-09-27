@@ -5,6 +5,7 @@
     --main-color: #177017;
     --secondary-color: #468A19;
     --weird-color: #198754;
+    --weirder-color: #1bc576;
     --main-text-color: #848C7C;
     --secondary-text-color: #848C8B;
     --background-color: #0C1414;
@@ -34,6 +35,30 @@ body {
 
 
 /* Utility */
+a:link {
+    color: var(--secondary-color);
+}
+
+a:visited {
+    color: var(--main-color) !important;
+}
+
+a:hover {
+    color: var(--weird-color) !important;
+}
+
+a:focus {
+    color: var(--main-color) !important;
+}
+
+a.active {
+    color: var(--weirder-color) !important;
+}
+a
+{
+    color: var(--main-color) !important;
+}
+
 .stroke-bar {
     border-bottom: 1px solid var(--secondary-text-color);
 }
@@ -167,26 +192,6 @@ body {
 .navbar-default {
     background-color: var(--black);
     color: var(--main-color);
-}
-
-a:link {
-    color: var(--main-color);
-}
-
-a:visited {
-    color: var(--main-color) !important;
-}
-
-a:hover {
-    color: var(--secondary-color) !important;
-}
-
-a:focus {
-    color: var(--main-color) !important;
-}
-
-a.active {
-    color: var(--weird-color) !important;
 }
 
 .navbar-brand-img {

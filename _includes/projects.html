@@ -16,7 +16,7 @@
                     </div>
                     <div class="col-4 platform-icons align-self-end text-end">
                         {% for platform in item.platforms %}
-                        <a type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="{{platform}}"><span><i
+                        <a aria-hidden="true" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="{{platform}}"><span><i
                                     class="fab fa-{{platform | downcase}} platforms"></i></span></a>
                         {% endfor %}
                     </div>
@@ -27,7 +27,7 @@
                         <video id="animated" class="img-fluid" autoplay loop muted playsinline>
                             <source type="video/webm" alt="{{item.title}} GIF" src="{{item.gif-url}}">
                         </video>
-                        <img id="static" class="img-fluid" alt="{{item.title}} Thumbnail" src="{{item.img-url}}">
+                        <img width="1920" height="1080" id="static" class="img-fluid" alt="{{item.title}} Thumbnail" src="{{item.img-url}}">
                     </div>
                 </div>
                 <div class="break"></div>
