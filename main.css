@@ -207,6 +207,8 @@ a
 }
 
 .navbar-nav>.nav-item {
+    padding-left: -5%;
+    padding-right: 7%;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -292,7 +294,7 @@ a
 }
 
 .skill-flag-img {
-    width: 72px;
+    width: 96px;
     height: 48px;
 }
 
@@ -536,6 +538,11 @@ a
 
     .lang-header {
         font-size: 2em;
+    }
+
+    .navbar-nav>.nav-item {
+        margin-left: 0%;
+        margin-right: 0%;
     }
 }
 
