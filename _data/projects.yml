@@ -9,7 +9,7 @@
     - Linux
   dev-url: tt
   img-url: /assets/images/tt-thumbnail.png
-  gif-url: /assets/images/tt-preview.gif
+  gif-url: /assets/images/tt-preview.webm
   yt-url: https://www.youtube-nocookie.com/embed/A9Xg9ElNtLg
   description:
     en: >-
@@ -62,7 +62,7 @@
     - Android
   dev-url: tgib
   img-url: /assets/images/tgib-thumbnail.png
-  gif-url: /assets/images/tgib-preview.gif
+  gif-url: /assets/images/tgib-preview.webm
   yt-url: https://www.youtube-nocookie.com/embed/BC3UiNOp7Wc
   description:
     en: >-

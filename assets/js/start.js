@@ -13,7 +13,12 @@ function getLang()
 function setLangBasedOnBrowser()
 {
   var k = getLang().substring(0, 2);
-  if (window.location.pathname.substring(1, 3) == k)
+  if (k === 'en')
+  {
+    return;
+  }
+
+  if (window.location.pathname.substring(1, 3) === k)
   {
     return;
   }

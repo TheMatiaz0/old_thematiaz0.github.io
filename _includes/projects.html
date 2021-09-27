@@ -24,7 +24,9 @@
                 <div class="hd-break"></div>
                 <div class="row img-section">
                     <div id="img-wrap" class="static wrapper">
-                        <img id="animated" class="img-fluid" alt="{{item.title}} GIF" src="{{item.gif-url}}">
+                        <video id="animated" class="img-fluid" autoplay loop muted playsinline>
+                            <source type="video/webm" alt="{{item.title}} GIF" src="{{item.gif-url}}">
+                        </video>
                         <img id="static" class="img-fluid" alt="{{item.title}} Thumbnail" src="{{item.img-url}}">
                     </div>
                 </div>
