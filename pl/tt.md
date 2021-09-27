@@ -8,8 +8,8 @@ lang-info: tt
 <div class="stroke-bar"></div>
 <div class="break"></div>
 
-# CZYM JEST THE TOWERER?
+<h1 class="header">Czym jest The Towerer?</h1>
 
 <div class="hd-break"></div>
 
-The Towerer to gra 2D roguelike, utrzymana w klimacie bullet-hell shooterów. Zostajesz w niej wrzucony do świata sci-fi, przepełnionego futurystycznymi broniami i przedmiotami.
+<p class="full-text">The Towerer to gra 2D roguelike, utrzymana w klimacie bullet-hell shooterów. Zostajesz w niej wrzucony do świata sci-fi, przepełnionego futurystycznymi broniami i przedmiotami.</p>

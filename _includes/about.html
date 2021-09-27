@@ -25,10 +25,11 @@
             <p>{{translations.fifth-paragraph[page.language]}}</p>
           </div>
 
-
+          <div class="text-center text-lg-start">
           <button onclick="window.open(`{% if page.language != 'en' %}/{{page.language}}/{% endif %}resume.pdf`, '_blank')" type="button"
             class="btn btn-success resume-btn resume-size"><i class="far fa-file-pdf"></i><span
               class="resume-span">{{translations.resume-btn[page.language]}}</span></button>
+            </div> 
         </div>
       </div>
     </div>

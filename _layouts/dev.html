@@ -3,11 +3,12 @@ layout: default
 ---
 {% assign translations = site.data.dev-translations %}
 {% include full-lang-switch.html %}
+<link rel="stylesheet" href="{{ base.url | prepend: site.url }}/blog.css" />
 <h2 class="header">{{site.data.projects[page.id].title}}</h2>
 <div class="break"></div>
-<div class="container">
+<div class="container text-center text-lg-start">
     <div class="row">
-        <div class="col">
+        <div class="col-lg-6">
             <div class="container video-contain">
                 <iframe width="100%" height="100%" src="{{site.data.projects[page.id].yt-url}}"
                     title="YouTube video player" frameborder="0"
@@ -15,23 +16,23 @@ layout: default
                     allowfullscreen></iframe>
             </div>
         </div>
-        <div class="col">
-            <p>{{translations.release[page.language]}} {{site.data.projects[page.id].release[page.language]}}</p>
-            <p>Studio: {{site.data.projects[page.id].studio[page.language]}}</p>
-            <p>{{translations.platforms[page.language]}}
+        <div class="col-lg-6">
+            <p class="info-text">{{translations.release[page.language]}} {{site.data.projects[page.id].release[page.language]}}</p>
+            <p class="info-text">Studio: {{site.data.projects[page.id].studio[page.language]}}</p>
+            <p class="info-text">{{translations.platforms[page.language]}}
                 {% for platform in site.data.projects[page.id].platforms%}
                 {{platform}}{%unless forloop.last %},{%endunless%}
                 {% endfor %}
             </p>
-            <p>{{translations.team[page.language]}} {{site.data.projects[page.id].team[page.language]}}</p>
-            <p>{{site.data.projects-translations.length[page.language]}} {{site.data.projects[page.id].time[page.language]}}</p>
-            <p>{{translations.responsibility[page.language]}} {{site.data.projects[page.id].responsibility[page.language]}}</p>
-            <p>{{site.data.projects-translations.tools[page.language]}}
+            <p class="info-text">{{translations.team[page.language]}} {{site.data.projects[page.id].team[page.language]}}</p>
+            <p class="info-text">{{site.data.projects-translations.length[page.language]}} {{site.data.projects[page.id].time[page.language]}}</p>
+            <p class="info-text">{{translations.responsibility[page.language]}} {{site.data.projects[page.id].responsibility[page.language]}}</p>
+            <p class="info-text">{{site.data.projects-translations.tools[page.language]}}
                 {% for tool in site.data.projects[page.id].tools%}
                 {{tool}}{%unless forloop.last %},{%endunless%}
                 {%endfor%}
             </p>
-            <p>
+            <p class="info-text">
                 {% for btn in site.data.projects[page.id].buttons %}
                 <button rel class="btn btn-success resume-btn"
                     onclick="window.open('{{btn.url}}', '_blank')">{{btn.title[page.language]}}
@@ -44,8 +45,10 @@ layout: default
 {{content | markdownify}}
 
 <div class="ultra-break"></div>
+<div class="stroke-bar"></div>
+<div class="break"></div>
 
-More information is coming soon...
-Contact me at <a href="mailto:mateusz.kusionowicz@protonmail.com">mateusz.kusionowicz@protonmail.com</a> to know more details for now.
+<p class="info-text">More information is coming soon...</p>
+<p class="info-text">Contact me at <a href="mailto:mateusz.kusionowicz@protonmail.com">mateusz.kusionowicz@protonmail.com</a> to know more details for now.</p>
 
 <div class="ultra-break"></div>

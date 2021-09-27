@@ -142,10 +142,24 @@ a
     margin-left: 17%;
     margin-right: 17%;
 }
-
 .video-contain {
-    width: 600px;
-    height: 338px;
+    position: relative;
+    padding-bottom: 56.25%; /* - 16:9 aspect ratio (most common) */
+    /* padding-bottom: 62.5%; - 16:10 aspect ratio */
+    /* padding-bottom: 75%; - 4:3 aspect ratio */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+.video-contain iframe,
+.video-contain object,
+.video-contain embed {
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .rm-line {
@@ -162,25 +176,6 @@ a
 
 .lang-header {
     font-size: 22px;
-}
-
-/* Blog */
-.PageNavigation {
-    font-size: 14px;
-    display: block;
-    width: auto;
-    overflow: hidden;
-}
-
-.PageNavigation a {
-    display: block;
-    width: 50%;
-    float: left;
-    margin: 1em 0;
-}
-
-.PageNavigation .next {
-    text-align: right;
 }
 
 /* Navbar */
@@ -262,12 +257,6 @@ a
 .resume-btn {
     color: var(--white);
     background-color: var(--main-color);
-}
-
-.resume-size {
-    width: 240px;
-    height: 50px;
-    font-size: 18px;
 }
 
 .resume-span {
@@ -353,7 +342,7 @@ a
     }
 
     .game-text {
-        font-size: 1.8em;
+        font-size: 1.9em;
     }
 
     .icon-shelf {
@@ -383,6 +372,20 @@ a
 
     .platforms {
         font-size: 4.5em;
+    }
+    .fix-break {
+        padding-top: 0px !important;
+    }
+    .about-text {
+        font-size: 26px;
+    }
+
+    .resume-size {
+        font-size: 26px;
+    }
+
+    .skill-text {
+        font-size: 28px;
     }
 }
 
@@ -441,6 +444,12 @@ a
     .platforms {
         font-size: 2.5em;
     }
+
+    .resume-size {
+        width: 240px;
+        height: 50px;
+        font-size: 18px;
+    }
 }
 
 
@@ -457,7 +466,7 @@ a
     }
 
     .navbar-brand {
-        margin-left: 1.5%;
+        margin-left: 13px;
         font-size: 32px;
         text-align: center;
     }
@@ -543,6 +552,13 @@ a
     .navbar-nav>.nav-item {
         margin-left: 0%;
         margin-right: 0%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .resume-size {
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
     }
 }
 
@@ -620,4 +636,13 @@ a
         font-size: 12px;
     }
 
+    .fix-break {
+        padding-top: 85px !important;
+    }
+
+    .resume-size {
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+    }
 }
