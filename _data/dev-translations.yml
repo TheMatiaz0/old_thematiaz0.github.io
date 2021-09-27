@@ -1,0 +1,12 @@
+platforms:
+  en: 'Platforms:'
+  pl: 'Platformy:'
+team:
+  en: 'Team size:'
+  pl: 'Wielkość zespołu:'
+responsibility:
+  en: 'Responsibilities:'
+  pl: 'Byłem odpowiedzialny za:'
+release:
+  en: 'Release:'
+  pl: 'Wydano:'

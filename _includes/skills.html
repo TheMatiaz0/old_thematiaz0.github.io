@@ -1,0 +1,19 @@
+{% assign translations = site.data.skills-translations %}
+<div class="container">
+    <h2 id="skills" class="header"><span class="icon-shelf"><i class="fas fa-toolbox"></i></span>{{translations.skills[page.language]}}</h2>
+    <span class="header-under">{{translations.underskill[page.language]}}</span>
+    <div class="break"></div>
+    <div class="row">
+      {% for skill in site.data.skills.skill %}
+      <div class="col text-center">
+        <h4 class="skill-header">{{skill.category[page.language]}}</h4>
+        {% for language in skill.subskill %}
+        <a type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="{{language.time[page.language]}}">
+          <img class="{% if language.lang == true %} skill-flag-img {% else %} skill-img {% endif %}" src="{{ base.url | prepend: site.url }}/{{language.img-url}}">
+          <p class="skill-text">{% if language.lang == true %} {{language.title[page.language]}} {% else %} {{language.title}} {% endif %}</p>
+        </a>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>

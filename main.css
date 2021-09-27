@@ -1,0 +1,594 @@
+/* Root */
+:root {
+    --black: #020908;
+    --white: #ffffff;
+    --main-color: #177017;
+    --secondary-color: #468A19;
+    --weird-color: #198754;
+    --main-text-color: #848C7C;
+    --secondary-text-color: #848C8B;
+    --background-color: #0C1414;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Anonymous Pro', 'Syne Mono';
+    color: var(--main-text-color);
+    scroll-behavior: smooth;
+    font-size: 1.05vmax;
+    position: relative;
+}
+
+.tooltip {
+    font-family: 'Syne Mono', 'Anonymous Pro';
+    font-size: 14px;
+}
+
+.navbar-nav>li>.dropdown-menu {
+    background-color: black;
+}
+
+.navbar-nav>li>.dropdown-menu a:hover {
+    background-color: var(--black);
+}
+
+
+/* Utility */
+.stroke-bar {
+    border-bottom: 1px solid var(--secondary-text-color);
+}
+
+.stroke-bar::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header {
+    font-size: 56px;
+    font-weight: bold;
+    margin-bottom: -0.5%;
+}
+
+.header-under {
+    color: var(--secondary-text-color);
+    font-size: 18px;
+}
+
+.icon-shelf {
+    padding-right: 1.5%;
+}
+
+.break {
+    margin-top: 3%;
+}
+
+.hd-break {
+    margin-top: 1.5%;
+}
+
+.ultra-break {
+    margin-top: 6%;
+}
+
+.oh-lawd-he-comin {
+    margin-top: 12%;
+}
+
+.column-center {
+    align-content: center;
+    text-align: center;
+}
+
+.social-media {
+    margin-right: 5%;
+}
+
+.social-media-btn {
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 35px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.lang-switch {
+    width: 2em;
+    height: 1.3em;
+    display: inline;
+}
+
+.inline {
+    display: inline;
+}
+
+.rm-bg {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.activeBtn {
+    color: var(--weird-color) !important;
+}
+
+.main-margin {
+    margin-left: 17%;
+    margin-right: 17%;
+}
+.video-contain
+{
+    width: 600px;
+    height: 338px;
+}
+.rm-line
+{
+    text-decoration: none;
+}
+
+/* Blog */
+.PageNavigation {
+    font-size: 14px;
+    display: block;
+    width: auto;
+    overflow: hidden;
+  }
+  
+  .PageNavigation a {
+    display: block;
+    width: 50%;
+    float: left;
+    margin: 1em 0;
+  }
+  
+  .PageNavigation .next {
+    text-align: right;
+  }  
+
+/* Navbar */
+.navbar-brand {
+    font-size: 32px;
+    display: inline;
+}
+
+.navbar-default {
+    background-color: var(--black);
+    color: var(--main-color);
+}
+
+a:link {
+    color: var(--main-color);
+}
+
+a:visited {
+    color: var(--main-color) !important;
+}
+
+a:hover {
+    color: var(--secondary-color) !important;
+}
+
+a:focus {
+    color: var(--main-color) !important;
+}
+
+a.active {
+    color: var(--weird-color) !important;
+}
+
+.navbar-brand-img {
+    height: 10%;
+    width: 10%;
+    margin-bottom: 1.5%;
+    display: inline;
+}
+
+.fa-navicon {
+    color: #fff;
+    font-size: 28px;
+}
+
+.navbar-nav>.nav-item {
+    margin-left: 15.5px;
+    margin-right: 15.5px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+
+
+/* Section: PROJECTS */
+.game-title {
+    font-size: 40px;
+    margin-bottom: -1%;
+    font-weight: bold;
+}
+
+.date-title {
+    color: var(--secondary-text-color);
+}
+
+.platforms {
+    font-size: 56px;
+    color: var(--main-color);
+}
+
+.rip {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.unify-width {
+    width: 602px;
+}
+
+#img-wrap #static,
+#img-wrap:hover #animated {
+    display: inline;
+}
+
+#img-wrap #animated,
+#img-wrap:hover #static {
+    display: none;
+}
+
+
+
+/* Section: ABOUT */
+.about-text {
+    font-size: 20px;
+}
+
+.resume-btn {
+    color: var(--white);
+    background-color: var(--main-color);
+}
+
+.resume-size
+{
+    width: 240px;
+    height: 50px;
+    font-size: 18px;
+}
+
+.resume-span {
+    padding-left: 10%;
+}
+
+
+
+/* Section: SKILLS */
+.skill-header {
+    font-size: 36px;
+    margin-bottom: 5%;
+    font-weight: bolder;
+}
+
+.skill-text {
+    font-size: 18px;
+}
+
+.skill-img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10%;
+}
+
+.skill-flag-img {
+    width: 72px;
+    height: 48px;
+}
+
+/* Section: CONTACT */
+.margined {
+    margin-left: 10%;
+}
+
+.end-media {
+    font-size: 36px;
+}
+
+.contact-reach {
+    font-size: 16px;
+}
+
+.reach-points {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+
+/* Footer */
+.copyright {
+    font-size: 16px;
+}
+
+.footer-media {
+    font-size: 20px;
+}
+
+
+/* Responsiveness */
+/* Tablets (iPad, etc.) */
+@media (min-width: 600px) {
+    .nav-container {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .navbar-brand {
+        font-size: 48px;
+
+    }
+
+    .date-title {
+        font-size: 1.8em;
+    }
+
+    .game-title {
+        font-size: 3.7em;
+    }
+
+    .game-text {
+        font-size: 1.8em;
+    }
+
+    .icon-shelf {
+        font-size: 48px;
+        padding-right: 3%;
+    }
+
+    .header {
+        font-size: 58px;
+    }
+
+    #projects {
+        margin-top: 17%;
+    }
+
+    .footer-media {
+        font-size: 30px;
+    }
+
+    .copyright {
+        font-size: 21px;
+    }
+
+    .contact-reach {
+        font-size: 22px;
+    }
+
+    .platforms {
+        font-size: 4.5em;
+    }
+}
+
+/* PC */
+@media (min-width: 1100px) {
+    .nav-container {
+        text-align: left;
+        margin-left: 15%;
+    }
+
+    .navbar-nav {
+        font-size: 25px;
+        margin-right: 300px;
+    }
+
+    .navbar-brand {
+        font-size: 32px;
+    }
+
+    .icon-shelf {
+        padding-right: 1.5%;
+    }
+
+    .game-text {
+        font-size: 20px;
+    }
+
+    .game-title {
+        font-size: 1.8em;
+    }
+
+    .date-title {
+        font-size: 17px;
+    }
+
+    .vertical-center {
+        margin-bottom: 0%;
+    }
+
+    #projects {
+        margin-top: 6%;
+    }
+
+    .footer-media {
+        font-size: 30px;
+    }
+
+    .copyright {
+        font-size: 21px;
+    }
+
+    .contact-reach {
+        font-size: 22px;
+    }
+
+    .platforms {
+        font-size: 2.5em;
+    }
+}
+
+
+/* Smartphones */
+@media screen and (max-width: 767px) {
+
+    .nav-container {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .navbar-brand {
+        margin-left: 1.5%;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .navbar-brand-img {
+        height: 8%;
+        width: 8%;
+        margin-bottom: 2.5%;
+    }
+
+    .header {
+        font-size: 42px;
+    }
+
+    .platforms {
+        font-size: 36px;
+    }
+
+    .game-title {
+        font-size: 32px;
+    }
+
+    .date-title {
+        font-size: 14px;
+    }
+
+    .icon-shelf {
+        font-size: 36px;
+        padding-right: 5%;
+    }
+
+    .game-text {
+        font-size: 18px;
+    }
+
+    #projects {
+        margin-top: 15.5em;
+    }
+
+    .about-text {
+        font-size: 16px;
+    }
+
+    .header-under {
+        font-size: 14px;
+    }
+
+    .skill-header {
+        font-size: 2.8em;
+    }
+
+    .skill-text {
+        font-size: 1.9em;
+    }
+
+    .social-media-btn {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .skill-img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .skill-flag-img {
+        width: 56px;
+        height: 32px;
+    }
+
+    .end-media {
+        font-size: 22px;
+    }
+}
+
+/* Very small smartphones */
+@media screen and (max-width: 340px) {
+    .nav-container {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        font-size: 12px;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .header {
+        font-size: 30px;
+    }
+
+    .platforms {
+        font-size: 24px;
+    }
+
+    .game-title {
+        font-size: 23px;
+    }
+
+    .icon-shelf {
+        font-size: 28px;
+        padding-right: 5%;
+    }
+
+    .date-title {
+        font-size: 12px;
+    }
+
+    .game-text {
+        font-size: 14px;
+    }
+
+    #projects {
+        margin-top: 10%;
+    }
+
+    .about-text {
+        font-size: 15px;
+    }
+
+    .end-media {
+        font-size: 30px;
+    }
+
+    .social-media-btn {
+        font-size: 24px;
+    }
+
+    .skill-img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .skill-flag-img {
+        width: 56px;
+        height: 32px;
+    }
+
+    .skill-header {
+        font-size: 2.3em;
+    }
+
+    .header-under {
+        font-size: 12px;
+    }
+
+}

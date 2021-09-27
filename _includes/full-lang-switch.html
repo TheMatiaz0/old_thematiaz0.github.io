@@ -1,0 +1,14 @@
+<div class="text-center">
+    <h5>{{site.data.navigation-translations.read[page.language]}}</h5>
+    <a class="rm-bg {% if page.language == 'en' %} activeBtn {% endif %}" href="javascript:changeLang(null);">
+        <img class="lang-switch" src="{{ base.url | prepend: site.url }}/assets/images/eng.png">
+        EN
+    </a>
+    <a class="rm-bg {% if page.language == 'pl' %} activeBtn {% endif %}" href="javascript:changeLang('/pl/{{page.lang-info}}');">
+        <img class="lang-switch" src="{{ base.url | prepend: site.url }}/assets/images/pol.png">
+        PL
+    </a>
+</div>
+<div class="hd-break"></div>
+<div class="stroke-bar"></div>
+<div class="break"></div>

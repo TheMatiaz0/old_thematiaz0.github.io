@@ -1,0 +1,29 @@
+{% assign translations = site.data.navigation-translations %}
+<nav id="main-navbar" class="navbar fixed-top navbar-expand-xl navbar-default stroke-bar">
+  <div class="container-fluid justify-content-center nav-container">
+    <a class="navbar-brand" href="{%if page.language != 'en'%}/{{page.language}}{%endif%}/"><span><img class="navbar-brand-img img-fluid"
+          src="{{ base.url | prepend: site.url }}/favicon.jpeg" alt="TheMatiaz0 avatar"></span>ATEUSZ KUSIONOWICZ
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+        <i class="fa fa-navicon"></i>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a role="button" class="nav-link dropdown-toggle active" id="navbarDropdown" data-bs-toggle="dropdown"
+            aria-expanded="false" href="#project">{{translations.projects[page.language]}}</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{%if page.language != 'en'%}/{{page.language}}{%endif%}/tt">THE TOWERER</a></li>
+            <li><a class="dropdown-item" href="{%if page.language != 'en'%}/{{page.language}}{%endif%}/tgib">THIS GAME IS BROKEN</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="{%if page.language != 'en'%}/{{page.language}}{%endif%}{{page.baseurl}}/#about">{{translations.about[page.language]}}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{%if page.language != 'en'%}/{{page.language}}{%endif%}{{page.baseurl}}/#contact">{{translations.contact[page.language]}}</a></li>
+        <li class="nav-item"><a class="nav-link" href="{%if page.language != 'en'%}/{{page.language}}/{%endif%}/blog">BLOG</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

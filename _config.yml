@@ -1,0 +1,24 @@
+theme: null
+defaults:
+  - scope:
+      path: _posts/en
+      type: posts
+    values:
+      permalink: 'blog/:title/'
+      language: en
+  - scope:
+      path: _posts/pl
+      type: posts
+    values:
+      permalink: 'pl/blog/:title/'
+      language: pl
+  - scope:
+      path: pl
+      type: pages
+    values:
+      language: pl
+  - scope:
+      path: ""
+      type: pages
+    values:
+      language: en

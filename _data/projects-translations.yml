@@ -1,0 +1,15 @@
+project-done:
+  en: 'What I did:'
+  pl: 'Co dokonałem:'
+tools:
+  en: 'Software used:'
+  pl: 'Programy użyte:'
+length:
+  en: 'Project length:'
+  pl: 'Długość tworzenia:'
+process:
+  en: Development Process Page
+  pl: Strony z Procesem Tworzenia
+link:
+  en: 'Link:'
+  pl: 'Link do:'

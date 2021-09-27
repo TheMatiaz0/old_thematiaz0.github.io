@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<h1 class="header">{{ page.title }}</h1>
+<div class="hd-break"></div>
+<p>
+  {{ page.date | date_to_string }}
+</p>
+<div class="break"></div>
+
+{{ content }}
+{% assign siteposts = site.posts | where:'language', page.language %}
+<div class="hd-break"></div>
+<div class="PageNavigation">
+
+  {% for post in siteposts %}
+  {% if post.url == page.url %}
+  	{% assign pOffset = forloop.index0 | minus: 1 %}
+  	{% assign nOffset = pOffset | plus: 2 %}
+  {% if forloop.last == false %}
+    {% assign previous_post = siteposts[nOffset] %}
+    <a class="prev" href="{{previous_post.url}}">&laquo; {{previous_post.title}}</a>
+  {% endif %}
+  	{% if forloop.first == false %}
+  	  {% assign next_post = siteposts[pOffset] %}
+      <a class="next" href="{{next_post.url}}">{{next_post.title}} &raquo;</a>
+  	{% endif %}
+
+  	{% break %}
+  {% endif %}
+{% endfor %}
+</div>

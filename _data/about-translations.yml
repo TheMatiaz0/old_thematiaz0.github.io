@@ -1,0 +1,21 @@
+about:
+  en: ABOUT
+  pl: O MNIE
+first-paragraph:
+  en: Good morning or evening depending on the time you are reading this.
+  pl: Dzień dobry lub dobry wieczór w zależności o której to przeczytasz.
+second-paragraph:
+  en: My name is Mateusz Kusionowicz. I am a gameplay programmer with over 2 years of experience making games. My main interests are gameplay and user interface. I love designing UI and then coding it.
+  pl: Nazywam się Mateusz Kusionowicz. Jestem programistą z ponad dwuletnim doświadczeniem w tworzeniu gier. Moje główne zainteresowania obejmują gameplay i interfejs użytkownika. 
+third-paragraph:
+  en: My first experience with video games was when my dad introduced me to games like Chicken Invaders. I was around six back then and I knew back then that I want to create a game.
+  pl: Moje pierwsze doświadczenie z grami było w momencie kiedy mój tata pokazał mi takie gry jak Chicken Invaders. Byłem wtedy sześciolatkiem, ale wiedziałem że to jest co będę chciał robić w życiu - tworzyć gry.
+fourth-paragraph:
+  en: I started my game development journey with Clickteam Fusion 2.5 (which features visual scripting).
+  pl: Rozpocząłem podróż z tworzeniem gier z Clickteam Fusion 2.5 (które cechowało się wizualnym programowaniem).
+fifth-paragraph:
+  en: Finally, after about 3 years messing with Clickteam Fusion I started to learn Unity and C# and to this day I still learn a lot during game development process.
+  pl: Końcowo, po ponad trzech latach bawienia się z Clickteam Fusion zacząłem uczyć się silnika Unity i języka C#. Do tego dnia, nadal uczę się wiele odnośnie procesu tworzenia gier i jestem stale zmotywowany do tej nauki.
+resume-btn:
+  en: My Resume (CV)
+  pl: Mój Życiorys (CV)

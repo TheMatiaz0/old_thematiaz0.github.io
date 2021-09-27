@@ -1,0 +1,63 @@
+skill:
+  - category:
+      en: LANGUAGES
+      pl: JĘZYKI
+    subskill:
+      - title: 'C#'
+        img-url: assets/images/csharp.png
+        time:
+          en: 2 years of experience
+          pl: 2 lata doświadczenia
+      - title: Python
+        img-url: assets/images/python.png
+        time:
+          en: 1 year of experience
+          pl: Rok doświadczenia
+  - category:
+      en: ENGINES
+      pl: SILNIKI
+    subskill:
+      - title: Unity
+        img-url: assets/images/unity.png
+        time:
+          en: 3 years of experience
+          pl: 3 lata doświadczenia
+  - category:
+      en: SOFTWARE
+      pl: PROGRAMY
+    subskill:
+      - title: Visual Studio
+        img-url: assets/images/vs.png
+        time: 
+          en: 3 years of experience
+          pl: 3 lata doświadczenia
+      - title: Git
+        img-url: assets/images/git.png
+        time:
+          en: 3 years of experience
+          pl: 3 lata doświadczenia
+      - title: Inkscape
+        img-url: assets/images/inkscape.png
+        time: 
+          en: 1 year of experience
+          pl: Rok doświadczenia
+  - category:
+      en: HUMAN LANGUAGES
+      pl: JĘZYKI KOMUNIKACJI
+    subskill:
+      - title:
+          en: Polish
+          pl: Polski
+        img-url: assets/images/pol.png
+        time: 
+          en: Native
+          pl: Ojczysty
+        lang: true
+      - title: 
+          en: English
+          pl: Angielski
+        img-url: assets/images/eng.png
+        time:
+          en: C1 Level
+          pl: Poziom C1
+        lang: true

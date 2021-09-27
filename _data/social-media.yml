@@ -1,0 +1,12 @@
+- url: mailto:mateusz.kusionowicz@protonmail.com
+  label: mateusz.kusionowicz@protonmail.com
+  icon: far fa-envelope
+- url: https://github.com/TheMatiaz0
+  label: Mateusz Kusionowicz
+  icon: fab fa-github
+- url: https://www.linkedin.com/in/mateusz-kusionowicz
+  label: Mateusz Kusionowicz
+  icon: fab fa-linkedin-in
+- url: https://twitter.com/thematiaz0
+  label: Mateusz Kusionowicz
+  icon: fab fa-twitter

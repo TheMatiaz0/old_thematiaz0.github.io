@@ -1,0 +1,53 @@
+{% assign translations = site.data.projects-translations %}
+<div class="container">
+
+    <h2 id="project" class="header"><span class="icon-shelf"><i
+                class="fas fa-th-list"></i></span>{{site.data.navigation-translations.projects[page.language]}}</h2>
+    <div class="hd-break"></div>
+    <div class="row projects justify-content-center">
+        <div class="hd-break"></div>
+        {% for item in site.data.projects %}
+        <div class="col-lg-6 unify-width">
+            <div class="container rip">
+                <div class="row">
+                    <div class="col-8">
+                        <h3 class="game-title">{{item.title}}</h3>
+                        <span class="date-title">({{item.start-date}} - {{item.end-date}})</span>
+                    </div>
+                    <div class="col-4 platform-icons align-self-end text-end">
+                        {% for platform in item.platforms %}
+                        <a type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="{{platform}}"><span><i
+                                    class="fab fa-{{platform | downcase}} platforms"></i></span></a>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="hd-break"></div>
+                <div class="row img-section">
+                    <div id="img-wrap" class="static wrapper">
+                        <img id="animated" class="img-fluid" alt="{{item.title}} GIF" src="{{item.gif-url}}">
+                        <img id="static" class="img-fluid" alt="{{item.title}} Thumbnail" src="{{item.img-url}}">
+                    </div>
+                </div>
+                <div class="break"></div>
+                <div class="row">
+                    <p class="game-text"><i>{{translations.link[page.language]}}</i> <a
+                            href="{%if page.language != 'en'%}/{{page.language}}/{%endif%}{{item.dev-url}}">{{translations.process[page.language]}}</a></p>
+                    <p class="game-text"><i>{{translations.project-done[page.language]}}</i>
+                        {{item.description[page.language]}}</p>
+                    <p class="game-text"><i>{{translations.tools[page.language]}}</i> 
+                    {% for tool in item.tools %}
+                    {{tool}}{%unless forloop.last %},{%endunless%}
+                    {%endfor%}
+                    </p>
+                    <p class="game-text"><i>{{translations.length[page.language]}}</i>
+                        {{item.time[page.language]}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-xl-none">
+            <div class="ultra-break"></div>
+        </div>
+        {%endfor%}
+    </div>
+</div>

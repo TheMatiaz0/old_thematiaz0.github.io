@@ -1,0 +1,27 @@
+{% assign translations = site.data.contact-translations %}
+<div class="container">
+    <h2 id="contact" class="header"><span class="icon-shelf"><i class="fas fa-satellite-dish"></i></span>{{site.data.navigation-translations.contact[page.language]}}
+    </h2>
+    <div class="row">
+      <div class="col-6">
+        <div class="break"></div>
+        <nav class="social-media margined end-media">
+          {% for media in site.data.social-media %}
+          <a class="social-media-btn" href="{{media.url}}" target="_blank"
+            aria-label="{{media.label}}"><i class="{{media.icon}}"></i></a>
+        {% endfor %}
+        </nav>
+      </div>
+      <div class="col-6 contact-reach">
+        <p>{{translations.reach[page.language]}}</p>
+
+          {% for media in translations.reach-media %}
+          <p class="px-4">
+          {{media.title}}: <a class="reach-points" href="{{media.true-url}}">{{media.url}}</a>
+        </p>
+          {%endfor%}
+      </div>
+      <div class="break"></div>
+    </div>
+  </div>
+</div>
