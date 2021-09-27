@@ -1,14 +1,24 @@
+<div class="fix-break">
+
 <div class="text-center">
-    <h5>{{site.data.navigation-translations.read[page.language]}}</h5>
-    <a class="rm-bg {% if page.language == 'en' %} activeBtn {% endif %}" href="javascript:changeLang(null);">
+    <h5 class="lang-header">{{site.data.navigation-translations.read[page.language]}}</h5>
+    <a class="rm-bg lang-sizer {% if page.language == 'en' %} activeBtn {% endif %}" href="javascript:changeLang(null);">
         <img class="lang-switch" src="{{ base.url | prepend: site.url }}/assets/images/eng.png">
         EN
     </a>
-    <a class="rm-bg {% if page.language == 'pl' %} activeBtn {% endif %}" href="javascript:changeLang('/pl/{{page.lang-info}}');">
+    <a class="rm-bg lang-sizer {% if page.language == 'pl' %} activeBtn {% endif %}" href="javascript:changeLang('/pl/{{page.lang-info}}');">
         <img class="lang-switch" src="{{ base.url | prepend: site.url }}/assets/images/pol.png">
         PL
     </a>
 </div>
+
+<div class="d-xl-none">
+    <div class="ultra-break"></div>
+</div>
 <div class="hd-break"></div>
 <div class="stroke-bar"></div>
+<div class="d-xl-none">
+    <div class="ultra-break"></div>
+</div>
 <div class="break"></div>
+</div>
