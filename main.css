@@ -450,6 +450,10 @@ a
         height: 50px;
         font-size: 18px;
     }
+
+    .about-text {
+        font-size: 20px;
+    }
 }
 
 

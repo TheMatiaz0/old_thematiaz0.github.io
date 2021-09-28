@@ -53,8 +53,8 @@
 
 - title: THIS GAME IS BROKEN
   studio:
-     en: Cyberevolver_Studios (not a registered company)
-     pl: Cyberevolver_Studios (niezarejestrowany zespół)
+     en: NullPtr (team made only for game jam)
+     pl: NullPtr (zespół stworzony tylko na okazję game jamu)
   start-date: 01/2020
   end-date: 02/2020
   platforms:
@@ -87,7 +87,7 @@
     en: gameplay programming, game design, marketing
     pl: programowanie rozgrywki, design rozgrywki, marketing
   team:
-    en: four members (three members from Cyberevolver_Studios and one additional person from KrakJam)
+    en: four person team
     pl: czteroosobowy zespół
   buttons:
     - title: 
@@ -102,3 +102,7 @@
         en: GitHub (source code)
         pl: GitHub (kod źródłowy)
       url: 'https://github.com/TheMatiaz0/This-Game-Is-Broken'
+    - title:
+        en: Game Jam Version
+        pl: Wersja gry z Game Jamu
+      url: 'https://v3.globalgamejam.org/2020/games/game-broken-1'
