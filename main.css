@@ -20,11 +20,6 @@ body {
     position: relative;
 }
 
-.tooltip {
-    font-family: 'Syne Mono', 'Anonymous Pro';
-    font-size: 14px;
-}
-
 .navbar-nav>li>.dropdown-menu {
     background-color: black;
 }
@@ -35,6 +30,11 @@ body {
 
 
 /* Utility */
+.tooltip
+{
+    font-family: 'Syne Mono', 'Anonymous Pro';
+    font-size: 14px;
+}
 a:link {
     color: var(--secondary-color);
 }
@@ -54,19 +54,13 @@ a:focus {
 a.active {
     color: var(--weirder-color) !important;
 }
-a
-{
+
+a {
     color: var(--main-color) !important;
 }
 
 .stroke-bar {
     border-bottom: 1px solid var(--secondary-text-color);
-}
-
-.stroke-bar::after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 .header {
@@ -96,10 +90,6 @@ a
     margin-top: 6%;
 }
 
-.oh-lawd-he-comin {
-    margin-top: 12%;
-}
-
 .column-center {
     align-content: center;
     text-align: center;
@@ -125,10 +115,6 @@ a
     display: inline;
 }
 
-.inline {
-    display: inline;
-}
-
 .rm-bg {
     text-decoration: none;
     color: var(--secondary-color);
@@ -142,15 +128,15 @@ a
     margin-left: 17%;
     margin-right: 17%;
 }
+
 .video-contain {
     position: relative;
-    padding-bottom: 56.25%; /* - 16:9 aspect ratio (most common) */
-    /* padding-bottom: 62.5%; - 16:10 aspect ratio */
-    /* padding-bottom: 75%; - 4:3 aspect ratio */
+    padding-bottom: 56.25%;
     padding-top: 30px;
     height: 0;
     overflow: hidden;
 }
+
 .video-contain iframe,
 .video-contain object,
 .video-contain embed {
@@ -177,6 +163,7 @@ a
 .lang-header {
     font-size: 22px;
 }
+
 
 /* Navbar */
 .navbar-brand {
@@ -250,10 +237,6 @@ a
 
 
 /* Section: ABOUT */
-.about-text {
-    font-size: 20px;
-}
-
 .resume-btn {
     color: var(--white);
     background-color: var(--main-color);
@@ -271,15 +254,9 @@ a
     margin-bottom: 5%;
     font-weight: bolder;
 }
-
-.skill-text {
-    font-size: 18px;
-}
-
 .skill-img {
     width: 64px;
     height: 64px;
-    margin-bottom: 10%;
 }
 
 .skill-flag-img {
@@ -288,14 +265,6 @@ a
 }
 
 /* Section: CONTACT */
-.margined {
-    margin-left: 10%;
-}
-
-.end-media {
-    font-size: 36px;
-}
-
 .contact-reach {
     font-size: 16px;
 }
@@ -311,40 +280,27 @@ a
     font-size: 16px;
 }
 
-.footer-media {
-    font-size: 20px;
-}
-
 
 /* Responsiveness */
 /* Tablets (iPad, etc.) */
-@media (min-width: 600px) {
+@media screen and (max-width: 1385px) {
+    /* Navigation | Tablets */
     .nav-container {
         text-align: center;
     }
-
     .navbar-nav {
-        font-size: 25px;
+        font-size: 28px;
         text-align: center;
     }
-
+    .dropdown-item
+    {
+        font-size: 26px !important;
+    }
     .navbar-brand {
         font-size: 48px;
-
     }
 
-    .date-title {
-        font-size: 1.8em;
-    }
-
-    .game-title {
-        font-size: 3.7em;
-    }
-
-    .game-text {
-        font-size: 1.9em;
-    }
-
+    /* Utility | Tablets */
     .icon-shelf {
         font-size: 48px;
         padding-right: 3%;
@@ -354,14 +310,22 @@ a
         font-size: 58px;
     }
 
+    /* Projects | Tablets */
+    .date-title {
+        font-size: 1.8em;
+    }
+    .game-title {
+        font-size: 3.7em;
+    }
+    .game-text {
+        font-size: 1.9em;
+    }
+
     #projects {
         margin-top: 17%;
     }
 
-    .footer-media {
-        font-size: 30px;
-    }
-
+    /* Footer | Tablets */
     .copyright {
         font-size: 21px;
     }
@@ -373,9 +337,11 @@ a
     .platforms {
         font-size: 4.5em;
     }
+
     .fix-break {
         padding-top: 0px !important;
     }
+
     .about-text {
         font-size: 26px;
     }
@@ -387,10 +353,22 @@ a
     .skill-text {
         font-size: 28px;
     }
+    .navbar-nav>.nav-item {
+        margin-left: 0%;
+        margin-right: 0%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .header-under {
+        font-size: 25px;
+    }
+    .tooltip{
+        font-size: 22px;
+    }
 }
 
 /* PC */
-@media (min-width: 1100px) {
+@media (min-width: 1385px) {
     .nav-container {
         text-align: left;
         margin-left: 15%;
@@ -421,16 +399,8 @@ a
         font-size: 17px;
     }
 
-    .vertical-center {
-        margin-bottom: 0%;
-    }
-
     #projects {
         margin-top: 6%;
-    }
-
-    .footer-media {
-        font-size: 30px;
     }
 
     .copyright {
@@ -454,12 +424,17 @@ a
     .about-text {
         font-size: 20px;
     }
+
+    .skill-text {
+        font-size: 24px;
+    }
 }
 
 
 /* Smartphones */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 820px) {
 
+    /* Navigation | Smartphones */
     .nav-container {
         text-align: center;
     }
@@ -470,7 +445,7 @@ a
     }
 
     .navbar-brand {
-        margin-left: 13px;
+        margin-left: 14.5px;
         font-size: 32px;
         text-align: center;
     }
@@ -481,10 +456,33 @@ a
         margin-bottom: 2.5%;
     }
 
+    .navbar-nav>.nav-item {
+        margin-left: 0%;
+        margin-right: 0%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    /* Utility | Smartphones */
     .header {
         font-size: 42px;
     }
 
+    .icon-shelf {
+        font-size: 36px;
+        padding-right: 5%;
+    }
+
+    .social-media-btn {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .tooltip
+    {
+        font-size: 14px;
+    }
+
+    /* Projects | Smartphones */
     .platforms {
         font-size: 36px;
     }
@@ -497,11 +495,6 @@ a
         font-size: 14px;
     }
 
-    .icon-shelf {
-        font-size: 36px;
-        padding-right: 5%;
-    }
-
     .game-text {
         font-size: 18px;
     }
@@ -510,10 +503,18 @@ a
         margin-top: 15.5em;
     }
 
+    /* About | Smartphones */
     .about-text {
         font-size: 16px;
     }
 
+    .resume-size {
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+    }
+
+    /* Skills | Smartphones */
     .header-under {
         font-size: 14px;
     }
@@ -523,12 +524,7 @@ a
     }
 
     .skill-text {
-        font-size: 1.9em;
-    }
-
-    .social-media-btn {
-        margin-left: 2%;
-        margin-right: 2%;
+        font-size: 18px;
     }
 
     .skill-img {
@@ -541,10 +537,13 @@ a
         height: 32px;
     }
 
-    .end-media {
-        font-size: 22px;
+    /* Contact | Smartphones */
+    .reach-points
+    {
+        font-size: 16px;
     }
 
+    /* Language Select | Smartphones */
     .lang-sizer {
         font-size: 2.4em;
     }
@@ -552,22 +551,12 @@ a
     .lang-header {
         font-size: 2em;
     }
-
-    .navbar-nav>.nav-item {
-        margin-left: 0%;
-        margin-right: 0%;
-        padding-left: 0%;
-        padding-right: 0%;
-    }
-    .resume-size {
-        width: 100%;
-        height: 100%;
-        font-size: 18px;
-    }
 }
 
 /* Very small smartphones */
 @media screen and (max-width: 340px) {
+
+    /* Navigation | Very small smartphones */
     .nav-container {
         text-align: center;
     }
@@ -581,21 +570,31 @@ a
         text-align: center;
     }
 
+    /* Utility | Very small smartphones */
     .header {
         font-size: 30px;
     }
 
+    .icon-shelf {
+        font-size: 28px;
+        padding-right: 5%;
+    }
+
+    .social-media-btn {
+        font-size: 24px;
+    }
+
+    .fix-break {
+        padding-top: 85px !important;
+    }
+
+    /* Projects | Very small smartphones */
     .platforms {
         font-size: 24px;
     }
 
     .game-title {
         font-size: 23px;
-    }
-
-    .icon-shelf {
-        font-size: 28px;
-        padding-right: 5%;
     }
 
     .date-title {
@@ -610,18 +609,18 @@ a
         margin-top: 10%;
     }
 
+    .resume-size {
+        width: 100%;
+        height: 100%;
+        font-size: 18px;
+    }
+
+    /* About | Very small smartphones */
     .about-text {
         font-size: 15px;
     }
 
-    .end-media {
-        font-size: 30px;
-    }
-
-    .social-media-btn {
-        font-size: 24px;
-    }
-
+    /* Skills | Very small smartphones */
     .skill-img {
         width: 48px;
         height: 48px;
@@ -638,15 +637,5 @@ a
 
     .header-under {
         font-size: 12px;
-    }
-
-    .fix-break {
-        padding-top: 85px !important;
-    }
-
-    .resume-size {
-        width: 100%;
-        height: 100%;
-        font-size: 18px;
     }
 }
