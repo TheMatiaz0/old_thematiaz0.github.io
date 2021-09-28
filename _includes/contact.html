@@ -12,9 +12,8 @@
         {% endfor %}
         </nav>
       </div>
-      <div class="col-lg-6 contact-reach">
+      <div class="col-lg-6 text-center text-lg-start contact-reach">
         <p class="reach-points">{{translations.reach[page.language]}}</p>
-
           {% for media in translations.reach-media %}
           <p class="px-4">
           {{media.title}}: <a class="reach-points" href="{{media.true-url}}">{{media.url}}</a>

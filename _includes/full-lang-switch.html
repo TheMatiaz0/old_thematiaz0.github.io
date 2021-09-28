@@ -3,11 +3,11 @@
 <div class="text-center">
     <h5 class="lang-header">{{site.data.navigation-translations.read[page.language]}}</h5>
     <a class="rm-bg lang-sizer {% if page.language == 'en' %} activeBtn {% endif %}" href="javascript:changeLang(null);">
-        <img alt="UK/US flag" class="img-fluid lang-switch lang-img-sizer" src="{{ base.url | prepend: site.url }}/assets/images/eng.webp">
+        <img alt="UK/US flag as human language" class="img-fluid lang-switch lang-img-sizer" src="{{ base.url | prepend: site.url }}/assets/images/eng.webp">
         EN
     </a>
     <a class="rm-bg lang-sizer {% if page.language == 'pl' %} activeBtn {% endif %}" href="javascript:changeLang('/pl/{{page.lang-info}}');">
-        <img alt="Polish flag" class="img-fluid lang-switch lang-img-sizer" src="{{ base.url | prepend: site.url }}/assets/images/pol.webp">
+        <img alt="Polish flag as human language" class="img-fluid lang-switch lang-img-sizer" src="{{ base.url | prepend: site.url }}/assets/images/pol.webp">
         PL
     </a>
 </div>
@@ -20,5 +20,4 @@
 <div class="d-xl-none">
     <div class="ultra-break"></div>
 </div>
-<div class="break"></div>
-</div>
+<div class="hd-break"></div>

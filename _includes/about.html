@@ -1,36 +1,42 @@
 {% assign translations = site.data.about-translations %}
 <div class="container">
-    <h2 id="about" class="header"><span class="icon-shelf"><i class="fas fa-user-circle"></i></span>{{site.data.navigation-translations.about[page.language]}}</h2>
-    <div class="break"></div>
-    <div class="text-start">
-      <div class="row about-section">
-        <div class="col-lg-4 align-self-center">
-          <div class="column-center text-center">
-            <img alt="My profile picture" class="img-fluid align-vertical" width="400" height="400" src="{{ base.url | prepend: site.url }}/assets/images/MateuszKusionowicz.webp" />
-            <div class="ultra-break"></div>
-            <nav class="social-media">
+  <h2 id="about" class="header"><span class="icon-shelf"><i
+        class="fas fa-user-circle"></i></span>{{site.data.navigation-translations.about[page.language]}}</h2>
+  <div class="break"></div>
+  <div class="text-start">
+    <div class="row about-section">
+      <div class="col-lg-4 align-self-center">
+        <div class="column-center text-center">
+          <img alt="Mateusz Kusionowicz" class="img-fluid align-vertical" width="400" height="400"
+            src="{{ base.url | prepend: site.url }}/assets/images/MateuszKusionowicz.webp" />
+          <div class="ultra-break"></div>
+          <nav class="social-media">
             {% for media in site.data.social-media %}
-              <a rel="noopener" class="social-media-btn" href="{{media.url}}" target="_blank"
-                aria-label="{{media.label}}"><i class="{{media.icon}}"></i></a>
+            <a rel="noopener" class="social-media-btn" href="{{media.url}}" target="_blank"
+              aria-label="{{media.label}}"><i class="{{media.icon}}"></i></a>
             {% endfor %}
-            </nav>
-          </div>
+          </nav>
         </div>
-        <div class="col-lg-8 text-center text-lg-start align-self-start">
-          <div class="about-text">
-            <p>{{translations.first-paragraph[page.language]}}</p>
-            <p>{{translations.second-paragraph[page.language]}}</p>
-            <p>{{translations.third-paragraph[page.language]}}</p>
-            <div class="d-none d-lg-block d-xl-block"><p>{{translations.fourth-paragraph[page.language]}}</p></div>
-            <p>{{translations.fifth-paragraph[page.language]}}</p>
+      </div>
+      <div class="col-lg-8 text-center text-lg-start align-self-start">
+        <div class="about-text">
+          <p>{{translations.first-paragraph[page.language]}}</p>
+          <p>{{translations.second-paragraph[page.language]}}</p>
+          <p>{{translations.third-paragraph[page.language]}}</p>
+          <div class="d-none d-lg-block d-xl-block">
+            <p>{{translations.fourth-paragraph[page.language]}}</p>
           </div>
+          <p>{{translations.fifth-paragraph[page.language]}}</p>
+        </div>
 
-          <div class="text-center text-lg-start">
-          <button onclick="window.open(`{% if page.language != 'en' %}/{{page.language}}/{% endif %}resume.pdf`, '_blank')" type="button"
-            class="btn btn-success resume-btn resume-size"><i class="far fa-file-pdf"></i><span
+        <div class="text-center text-lg-start">
+          <div class="break"></div>
+          <button
+            onclick="window.open(`{% if page.language != 'en' %}/{{page.language}}/{% endif %}resume.pdf`, '_blank')"
+            type="button" class="btn btn-success resume-btn resume-size"><i class="far fa-file-pdf"></i><span
               class="resume-span">{{translations.resume-btn[page.language]}}</span></button>
-            </div> 
         </div>
       </div>
     </div>
   </div>
+</div>

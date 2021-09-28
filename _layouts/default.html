@@ -40,7 +40,8 @@
   <meta property="twitter:description"
     content="Game Developer, Programmer and Designer Portfolio of Mateusz Kusionowicz. Experienced in Unity, C#, Gameplay Programming, UI Programming.">
 
-  <link style="font-display: auto;" href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Syne+Mono&display=swap" rel="stylesheet">
+  <link style="font-display: auto;" href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Syne+Mono&display=swap"
+    rel="stylesheet">
 
 
   <link href="vendor/font-awesome/css/font-awesome.min.css">
@@ -60,11 +61,13 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="{{ base.url | prepend: site.url }}/assets/js/start.js"></script>
+
+  {% include navigation.html %}
   <div class="main-margin" id="projects">
-    {% include navigation.html %}
     {{content}}
-    {% include footer.html %}
   </div>
+  {% include footer.html %}
+
   <script src="{{ base.url | prepend: site.url }}/assets/js/base.js"></script>
 </body>
 
