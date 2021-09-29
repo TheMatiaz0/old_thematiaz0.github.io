@@ -15,8 +15,8 @@ origin-header:
   pl: Historia
 
 origin-text:
-  en: "Our work began by revealing the theme of this year's jam, which is 'repair'. We immediately started thinking about something unconventional, which is... fixing the game you are currently playing. Initially we thought about a platformer shooter, but in the end we decided on an endless runner with the ability to go backwards (the only thing that pushes you forward is a wave of bugged letters like [this overflow bug in Pac-Man](https://www.youtube.com/watch?v=NKKfW8X9uYk), which our graphic designer was inspired by):"
-  pl: "Nasze prace rozpoczęły się od wyjawienia tematu tegorocznego jamu, czyli 'naprawa'. Od razu zaczęliśmy myśleć nad czymś niekonwencjonalnym, czyli naprawianiem gry w którą aktualnie grasz. Początkowo myśleliśmy nad strzelanką platformówką, ale w końcu stanęliśmy przy endless runnerze z możliwością cofania (jedynie co cię popycha do przodu to fala zbugowanych liter jak [ten błąd w Pac-Manie związany z przepełnieniem](https://www.youtube.com/watch?v=NKKfW8X9uYk), którym nasz grafik się inspirował):"
+  en: "Our work began by revealing the theme of this year's jam, which is 'repair'. We immediately started thinking about something unconventional, which is... fixing the game you are currently playing. Initially we thought about a platformer shooter, but in the end we decided on an endless runner with the ability to go backwards (the only thing that pushes you forward is a wave of bugged letters like <a href=`https://www.youtube.com/watch?v=NKKfW8X9uYk`>this overflow bug in Pac-Man</a>, which our graphic designer was inspired by):"
+  pl: "Nasze prace rozpoczęły się od wyjawienia tematu tegorocznego jamu, czyli 'naprawa'. Od razu zaczęliśmy myśleć nad czymś niekonwencjonalnym, czyli naprawianiem gry w którą aktualnie grasz. Początkowo myśleliśmy nad strzelanką platformówką, ale w końcu stanęliśmy przy endless runnerze z możliwością cofania (jedynie co cię popycha do przodu to fala zbugowanych liter jak <a href='https://www.youtube.com/watch?v=NKKfW8X9uYk'>ten błąd w Pac-Manie związany z przepełnieniem</a>, którym nasz grafik się inspirował):"
 
 pac-wave-url: /assets/images/tgib-past/pac-wave.webp
 game-wave-url: /assets/images/tgib-past/tgib-wave.webp
@@ -76,5 +76,5 @@ epilogue-text:
   pl: 'Po KrakJamie, wydałem poprawioną wersję gry This Game Is Broken na Game Jolt i Itch.io. Głównie to co poprawiłem to błędy (mały żart słowny) oraz ulepszyłem balans samej gry, ale także zaimplementowałem kilka nowych rzeczy, np. Game Jolt API lub postprocessing od Unity do stworzenia bardziej graficznych efektów bugów, takich jak te:'
 
 end-end-text:
-  en: And much more. Want more details about the game? Contact me at [mateusz.kusionowicz@protonmail.com](mailto:mateusz.kusionowicz@protonmail.com).
-  pl: I wiele więcej. Chcesz poznać więcej szczegółów odnośnie gry? Skontaktuj się ze mną poprzez e-mail [mateusz.kusionowicz@protonmail.com](mailto:mateusz.kusionowicz@protonmail.com).
+  en: And much more. Want more details about the game? Contact me at <a href="mailto:mateusz.kusionowicz@protonmail.com">mateusz.kusionowicz@protonmail.com</a>.
+  pl: I wiele więcej. Chcesz poznać więcej szczegółów odnośnie gry? Skontaktuj się ze mną poprzez e-mail <a href="mailto:mateusz.kusionowicz@protonmail.com">mateusz.kusionowicz@protonmail.com</a>.
