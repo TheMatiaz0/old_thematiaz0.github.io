@@ -1,7 +1,9 @@
+<div class="main-margin" id="projects">
+
 {% include full-lang-switch.html %}
 
 <h1 class="header">Latest Posts:</h1>
-<div class="hd-break"></div>
+<div class="break"></div>
 
 <ul>
   {% assign siteposts = site.posts | where:'language', page.language %}
@@ -11,6 +13,8 @@
       {{ item.excerpt }}
       <button onclick="location.href='{{ item.url }}'" class="btn btn-success resume-btn">Continue</button>
     </p>
-    <div class="break"></div>
+    <div class="ultra-break"></div>
   {% endfor %}
 </ul>
+</div>
+</div>

@@ -1,3 +1,80 @@
-header:
-  en: Overview
-  pl: Podsumowanie
+about-header:
+  en: This Game Is Broken?!
+  pl: Nazwa to... This Game Is Broken?!
+
+answer-text:
+  en: Yes :P
+  pl: Tak :P
+
+about-text: 
+  en: This Game Is Broken is a game that I made in a four-person team at a 72-hour stationary game jam called KrakJam (this game jam was part of Global Game Jam 2020). You play as a creeper-like creature that has been placed in a bugged game.
+  pl: This Game Is Broken to gra, którą zrobiłem w czteroosobowym zespole na 72 godzinnym stacjonarnym game jamie zwanym KrakJam (game jam ten był częścią Global Game Jamu 2020). Wcielasz się w creeperopodobnego stworka który został umieszczony w zbugowanej grze.
+
+origin-header:
+  en: Origin
+  pl: Historia
+
+origin-text:
+  en: "Our work began by revealing the theme of this year's jam, which is 'repair'. We immediately started thinking about something unconventional, which is... fixing the game you are currently playing. Initially we thought about a platformer shooter, but in the end we decided on an endless runner with the ability to go backwards (the only thing that pushes you forward is a wave of bugged letters like [this overflow bug in Pac-Man](https://www.youtube.com/watch?v=NKKfW8X9uYk), which our graphic designer was inspired by):"
+  pl: "Nasze prace rozpoczęły się od wyjawienia tematu tegorocznego jamu, czyli 'naprawa'. Od razu zaczęliśmy myśleć nad czymś niekonwencjonalnym, czyli naprawianiem gry w którą aktualnie grasz. Początkowo myśleliśmy nad strzelanką platformówką, ale w końcu stanęliśmy przy endless runnerze z możliwością cofania (jedynie co cię popycha do przodu to fala zbugowanych liter jak [ten błąd w Pac-Manie związany z przepełnieniem](https://www.youtube.com/watch?v=NKKfW8X9uYk), którym nasz grafik się inspirował):"
+
+pac-wave-url: /assets/images/tgib-past/pac-wave.webp
+game-wave-url: /assets/images/tgib-past/tgib-wave.webp
+offtopic-url: /assets/images/tgib-past/focused-work.webp
+code-3deffect-url: /assets/images/tgib-past/2dglitchcode.webp
+projection-url: /assets/images/tgib-past/projection.webp
+
+3deffect-url: /assets/images/tgib-past/3d.webm
+
+vignetteffect-url: /assets/images/tgib-past/vignette.webm
+blindeffect-url: /assets/images/tgib-past/blind.webm
+
+glitched-url: /assets/images/tgib-past/glitched.webm
+glowing-url: /assets/images/tgib-past/glowing.webm
+
+origin-img-1:
+  en: Bug in Pac-Man
+  pl: Bug w Pac-Manie
+
+origin-img-2:
+  en: Wave in This Game Is Broken
+  pl: Ściana gliczy w This Game Is Broken
+explanation:
+  en: 'However, what was going to be most related to the bugs and overall to the repair theme itself were the items you pick up along the game route:'
+  pl: 'Jednak to, co miało być najbardziej związane z bugami i w sumie z samym tematem naprawy to przedmioty, które podnosisz na trasie gry:'
+
+explanation-item-1:
+  en: The first one is a repair kit, it glows a solid colour as it holds "the game" together (aka repairs it to its original state, erasing the random glitched effect from the bug).
+  pl: Pierwszy to zestaw naprawczy, świeci się w jednolitym kolorze, ponieważ trzyma grę w kupie (aka naprawia ją do stanu pierwotnego, kasując losowy efekt buga).
+
+explanation-item-2:
+  en: The second is the bug itself, dangerous, it adds a random glitched effect from our created pool. 
+  pl: Drugi to sam bug, niebezpieczny, dodaje losowy zbugowany efekt z naszej stworzonej przepełnionej bugami puli. 
+
+offtopic-img:
+  en: My old-school laptop sabotaged some plans, but I still managed to get the game in time ;)
+  pl: Mój starej daty laptop sabotażował niektóre plany, ale i tak udało się dowieźć grę na czas ;)
+  
+game-insight-header:
+  en: Insights into my game development process
+  pl: Wgląd w mój proces tworzenia gry
+
+game-insight-text-1:
+  en: 'About that our glitch pool. If I had to pick the most interesting glitch effect that I have programmed during game jam I think it would be the Y-axis camera rotation (when the game changes into a sort of fake 3D mode):'
+  pl: 'Wracając jeszcze do tej puli bugów. Jeśli miałbym wybrać najciekawszy efekt buga, który zaprogramowałem podczas game jamu, to wydaje mi się, że byłby to obrót kamery w osi Y (w którym gra zmienia się jakby w taki tryb niby 3D):'
+
+code3d-img:
+  en: '(Make sure to setup in Unity option "Perspective" in projection if you want to achieve a similar effect):'
+  pl: '(Upewnij się, aby ustawić w Unity opcję "Perspective" w projection jeśli chcesz uzyskać podobny efekt):'
+
+epilogue:
+  en: Epilogue
+  pl: Epilog
+
+epilogue-text:
+  en: 'After KrakJam, I released an improved version of This Game Is Broken. Mainly I fixed a lot of bugs and added a balance to the game, but also I implemented new features, such as Game Jolt API (for highscores and trophies) and postprocessing for more graphical glitchy effects, such as:'
+  pl: 'Po KrakJamie, wydałem poprawioną wersję gry This Game Is Broken na Game Jolt i Itch.io. Głównie to co poprawiłem to błędy (mały żart słowny) oraz ulepszyłem balans samej gry, ale także zaimplementowałem kilka nowych rzeczy, np. Game Jolt API lub postprocessing od Unity do stworzenia bardziej graficznych efektów bugów, takich jak te:'
+
+end-end-text:
+  en: And much more. Want more details about the game? Contact me at [mateusz.kusionowicz@protonmail.com](mailto:mateusz.kusionowicz@protonmail.com).
+  pl: I wiele więcej. Chcesz poznać więcej szczegółów odnośnie gry? Skontaktuj się ze mną poprzez e-mail [mateusz.kusionowicz@protonmail.com](mailto:mateusz.kusionowicz@protonmail.com).

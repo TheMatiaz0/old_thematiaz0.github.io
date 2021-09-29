@@ -20,7 +20,7 @@ body {
 }
 
 .navbar-nav>li>.dropdown-menu {
-    background-color: black;
+    background-color: var(--black);
 }
 
 .navbar-nav>li>.dropdown-menu a:hover {
@@ -443,6 +443,10 @@ footer
     .skill-flag-img {
         width: 64px;
         height: 40px;
+    }
+    .dropdown-item
+    {
+        font-size: 20px !important;
     }
 }
 

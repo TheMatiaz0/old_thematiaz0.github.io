@@ -1,8 +1,76 @@
+{% assign translations = site.data.tgib-translations %}
+<div class="hd-break"></div>
+<div class="stroke-bar"></div>
+<div class="hd-break"></div>
 
-<div class="break"></div>
-
-<h1 class="header"></h1>
+<h1>{{translations.about-header[page.language]}}</h1>
 
 <div class="hd-break"></div>
 
-<p class="text-1"></p>
+<p class="text-1">{{translations.answer-text[page.language]}}</p>
+<p class="text-1">{{translations.about-text[page.language]}}</p>
+<div class="break"></div>
+
+<h1>{{translations.origin-header[page.language]}}</h1>
+
+<p class="text-1">{{translations.origin-text[page.language] | markdownify}}</p>
+<div class="container text-center justify-content-center">
+    <div class="row">
+        <div class="col">
+
+            <img class="img-fluid img-post" src="{{ base.url | prepend: site.url }}{{translations.pac-wave-url}}">
+            <p><i>{{translations.origin-img-1[page.language]}}</i></p>
+        </div>
+        <div class="col">
+            <img class="img-fluid img-post" src="{{ base.url | prepend: site.url }}{{translations.game-wave-url}}">
+            <p><i>{{translations.origin-img-2[page.language]}}</i></p>
+        </div>
+    </div>
+</div>
+<div class="break"></div>
+<p class="text-1">{{translations.explanation[page.language]}}</p>
+<div class="hd-break"></div>
+<div class="text-center justify-content-center">
+<video class="img-fluid" autoplay loop muted playsinline>
+    <source type="video/webm" alt="glowing" src="{{translations.glowing-url}}">
+</video>
+<video class="img-fluid" autoplay loop muted playsinline>
+    <source type="video/webm" alt="glowing" src="{{translations.glitched-url}}">
+</video>
+</div>
+
+<ul>
+    <li class="text-1">{{translations.explanation-item-1[page.language]}}</li>
+    <li class="text-1">{{translations.explanation-item-2[page.language]}}</li>
+</ul>
+<div class="ultra-break"></div>
+<div class="text-center justify-content-center">
+    <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.offtopic-url}}">
+    <p><i>{{translations.offtopic-img[page.language]}}</i></p>
+</div>
+<div class="ultra-break"></div>
+<h1>{{translations.game-insight-header[page.language]}}</h1>
+<p>{{translations.game-insight-text-1[page.language]}}</p>
+<div class="text-center justify-content-center">
+    <video class="img-fluid" autoplay loop muted playsinline>
+        <source type="video/webm" alt="fake 3D glitch effect" src="{{translations.3deffect-url}}">
+    </video>
+</div>
+<div class="text-center justify-content-center">
+    <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.code-3deffect-url}}">
+    <p>{{translations.code3d-img[page.language]}}</p>
+    <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.projection-url}}">
+</div>
+<div class="ultra-break"></div>
+<h1>{{translations.epilogue[page.language]}}</h1>
+<p>{{translations.epilogue-text[page.language]}}</p>
+<div class="text-center justify-content-center">
+    <video class="img-fluid" autoplay loop muted playsinline>
+        <source type="video/webm" alt="fake 3D glitch effect" src="{{translations.vignetteffect-url}}">
+    </video>
+    <video class="img-fluid" autoplay loop muted playsinline>
+        <source type="video/webm" alt="fake 3D glitch effect" src="{{translations.blindeffect-url}}">
+    </video>
+</div>
+<div class="break"></div>
+<p>{{translations.end-end-text[page.language] | markdownify}}</p>

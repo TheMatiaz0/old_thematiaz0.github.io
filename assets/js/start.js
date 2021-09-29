@@ -1,6 +1,5 @@
 languages = ['pl/'];
 
-
 function getLang()
 {
   if (navigator.languages != undefined)
