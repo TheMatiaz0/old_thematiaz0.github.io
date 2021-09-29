@@ -29,11 +29,11 @@ body {
 
 
 /* Utility */
-.tooltip {
+.tooltip
+{
     font-family: 'Syne Mono', 'Anonymous Pro';
     font-size: 14px;
 }
-
 a:link {
     color: var(--secondary-color);
 }
@@ -60,9 +60,12 @@ a {
 
 .stroke-bar {
     border-bottom: 1px solid var(--secondary-text-color);
+    margin-left: -25.5%;
+    margin-right: -25.5%;
 }
 
-.stroke-bar-nav {
+.stroke-bar-nav
+{
     border-bottom: 2px solid var(--secondary-text-color);
 }
 
@@ -257,7 +260,6 @@ a {
     margin-bottom: 5%;
     font-weight: bolder;
 }
-
 .skill-img {
     width: 64px;
     height: 64px;
@@ -284,7 +286,8 @@ a {
     font-size: 16px;
 }
 
-footer {
+footer
+{
     background-color: var(--black);
 }
 
@@ -292,21 +295,18 @@ footer {
 /* Responsiveness */
 /* Tablets (iPad, etc.) */
 @media screen and (max-width: 1385px) {
-
     /* Navigation | Tablets */
     .nav-container {
         text-align: center;
     }
-
     .navbar-nav {
         font-size: 28px;
         text-align: center;
     }
-
-    .dropdown-item {
+    .dropdown-item
+    {
         font-size: 26px !important;
     }
-
     .navbar-brand {
         font-size: 48px;
     }
@@ -325,11 +325,9 @@ footer {
     .date-title {
         font-size: 1.8em;
     }
-
     .game-title {
         font-size: 3.7em;
     }
-
     .game-text {
         font-size: 24px;
     }
@@ -366,19 +364,16 @@ footer {
     .skill-text {
         font-size: 28px;
     }
-
     .navbar-nav>.nav-item {
         margin-left: 0%;
         margin-right: 0%;
         padding-left: 0%;
         padding-right: 0%;
     }
-
     .header-under {
         font-size: 25px;
     }
-
-    .tooltip {
+    .tooltip{
         font-size: 22px;
     }
 }
@@ -498,8 +493,8 @@ footer {
         margin-left: 2%;
         margin-right: 2%;
     }
-
-    .tooltip {
+    .tooltip
+    {
         font-size: 14px;
     }
 
@@ -559,7 +554,8 @@ footer {
     }
 
     /* Contact | Smartphones */
-    .reach-points {
+    .reach-points
+    {
         font-size: 16px;
     }
 
@@ -571,8 +567,8 @@ footer {
     .lang-header {
         font-size: 2em;
     }
-
-    .dropdown-item {
+    .dropdown-item
+    {
         font-size: 16px !important;
     }
 }
