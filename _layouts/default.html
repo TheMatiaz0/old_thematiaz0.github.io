@@ -12,37 +12,33 @@
   <link rel="alternate" hreflang="pl" href="https://thematiaz0.github.io/pl">
   <link rel="alternate" hreflang="x-default" href="https://thematiaz0.github.io">
 
-  <meta name="keywords"
-    content="game games video development programming software engineer engineering entertainment developer c# unity ui design designer portfolio 2D Poland Polska">
-  <meta name="description"
-    content="Game Developer, Programmer and Designer Portfolio of Mateusz Kusionowicz. Experienced in Unity, C#, Gameplay Programming, UI Programming.">
-  <meta name="author" content="TheMatiaz0">
-  <meta name="language" content="English">
+  <meta name="keywords" content="{{site.data.meta.keywords[page.language]}}">
+  <meta name="description" content="{{site.data.meta.description[page.language]}}">
+  <meta name="author" content="TheMatiaz0 (Mateusz Kusionowicz)">
+  <meta name="language" content="{%if page.language == 'en' %}English{%else%}Polish{%endif%}">
   <meta name="robots" content="all">
   <meta name="theme-color" content="#468A19">
 
   <link rel="shortcut icon" href="{{ base.url | prepend: site.url }}/favicon.webp">
   <link rel="apple-touch-icon" href="{{ base.url | prepend: site.url }}/favicon.webp" />
   <link rel="icon" href="{{ base.url | prepend: site.url }}/favicon.webp" />
-  <link rel="canonical" href="https://thematiaz0.github.io" />
+  <link rel="canonical" href="{{site.data.meta.description[page.language]}}" />
 
-  <meta property="og:title" content="Mateusz Kusionowicz - Game Programmer Portfolio" />
+  <meta property="og:title" content="{{page.title}}" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://thematiaz0.github.io" />
+  <meta property="og:url" content="{{site.data.meta.url[page.language]}}" />
   <meta property="og:image" content="{{ base.url | prepend: site.url }}/favicon.webp" />
-  <meta property="og:description"
-    content="Game Developer, Programmer and Designer Portfolio of Mateusz Kusionowicz. Experienced in Unity, C#, Gameplay Programming, UI Programming." />
+  <meta property="og:description" content="{{site.data.meta.description[page.language]}}" />
 
   <meta property="twitter:card" content="{{ base.url | prepend: site.url }}/favicon.webp">
-  <meta property="twitter:url" content="https://thematiaz0.github.io">
+  <meta property="twitter:url" content="{{site.data.meta.url[page.language]}}">
   <meta property="twitter:image" content="{{ base.url | prepend: site.url }}/favicon.webp">
-  <meta property="twitter:title" content="Mateusz Kusionowicz - Game Programmer Portfolio">
-  <meta property="twitter:description"
-    content="Game Developer, Programmer and Designer Portfolio of Mateusz Kusionowicz. Experienced in Unity, C#, Gameplay Programming, UI Programming.">
+  <meta property="twitter:title" content="{{page.title}}">
+  <meta property="twitter:description" content="{{site.data.meta.description[page.language]}}">
+
 
   <link style="font-display: auto;" href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Syne+Mono&display=swap"
     rel="stylesheet">
-
 
   <link href="vendor/font-awesome/css/font-awesome.min.css">
 
@@ -63,9 +59,7 @@
   <script src="{{ base.url | prepend: site.url }}/assets/js/start.js"></script>
 
   {% include navigation.html %}
-  <div class="main-margin" id="projects">
-    {{content}}
-  </div>
+  {{content}}
   {% include footer.html %}
 
   <script src="{{ base.url | prepend: site.url }}/assets/js/base.js"></script>
