@@ -3,10 +3,31 @@
 <div class="stroke-bar"></div>
 <div class="break"></div>
 
+<h1 class="full-header">{{translations.screenshots-header[page.language]}}</h1>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-1-url}}">
+        </div>
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-2-url}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-3-url}}">
+        </div>
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-4-url}}">
+        </div>
+    </div>
+</div>
+
+<div class="break"></div>
+<div class="stroke-bar"></div>
+<div class="break"></div>
+
 <h1 class="full-header">{{translations.about-header[page.language]}}</h1>
-
-
-<div class="hd-break"></div>
 
 <p class="full-text">{{translations.answer-text[page.language]}}</p>
 <p class="full-text">{{translations.about-text[page.language]}}</p>

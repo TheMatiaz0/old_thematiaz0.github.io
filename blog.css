@@ -1,4 +1,14 @@
-
+:root {
+    --black: #020908;
+    --white: #ffffff;
+    --main-color: #177017;
+    --secondary-color: #468A19;
+    --weird-color: #198754;
+    --weirder-color: #1bc576;
+    --main-text-color: #848C7C;
+    --secondary-text-color: #848C8B;
+    --background-color: #0C1414;
+}
 
 /* Blog */
 .PageNavigation {
@@ -37,9 +47,21 @@
     font-size: 13pt;
 }
 
+.up-btn
+{
+    color: var(--main-text-color);
+}
+
+.large-return-btn
+{
+    width: 75px;
+    height: 75px;
+    font-size: 20pt;
+}
 
 /* PC */
 @media (min-width: 1385px) {
+    
 }
 
 /* Tablets (iPad, etc.) */
@@ -62,7 +84,7 @@
 @media screen and (max-width: 820px) {
     .full-header
     {
-        font-size: 32pt;
+        font-size: 28pt;
     }
     .full-text
     {

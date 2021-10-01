@@ -10,12 +10,16 @@ about-text:
   en: This Game Is Broken is a game that I made in a four-person team at a 72-hour stationary game jam called KrakJam (this game jam was part of Global Game Jam 2020). You play as a creeper-like creature that has been placed in a bugged game.
   pl: This Game Is Broken to gra, którą zrobiłem w czteroosobowym zespole na 72 godzinnym stacjonarnym game jamie zwanym KrakJam (game jam ten był częścią Global Game Jamu 2020). Wcielasz się w creeperopodobnego stworka który został umieszczony w zbugowanej grze.
 
+screenshots-header:
+  en: 'Screenshots'
+  pl: 'Zrzuty ekranu'
+
 origin-header:
   en: Origin
   pl: Historia
 
 origin-text:
-  en: "Our work began by revealing the theme of this year's jam, which is 'repair'. We immediately started thinking about something unconventional, which is... fixing the game you are currently playing. Initially we thought about a platformer shooter, but in the end we decided on an endless runner with the ability to go backwards (the only thing that pushes you forward is a wave of bugged letters like <a href=`https://www.youtube.com/watch?v=NKKfW8X9uYk`>this overflow bug in Pac-Man</a>, which our graphic designer was inspired by):"
+  en: "Our work began by revealing the theme of this year's jam, which is \"repair\". We immediately started thinking about something unconventional, which is... fixing the game you are currently playing. Initially we thought about a platformer shooter, but in the end we decided on an endless runner with the ability to go backwards (the only thing that pushes you forward is a wave of bugged letters like <a href=\"https://www.youtube.com/watch?v=NKKfW8X9uYk\">this overflow bug in Pac-Man</a>, which our graphic designer was inspired by):"
   pl: "Nasze prace rozpoczęły się od wyjawienia tematu tegorocznego jamu, czyli 'naprawa'. Od razu zaczęliśmy myśleć nad czymś niekonwencjonalnym, czyli naprawianiem gry w którą aktualnie grasz. Początkowo myśleliśmy nad strzelanką platformówką, ale w końcu stanęliśmy przy endless runnerze z możliwością cofania (jedynie co cię popycha do przodu to fala zbugowanych liter jak <a href='https://www.youtube.com/watch?v=NKKfW8X9uYk'>ten błąd w Pac-Manie związany z przepełnieniem</a>, którym nasz grafik się inspirował):"
 
 pac-wave-url: /assets/images/tgib-past/pac-wave.webp
@@ -23,6 +27,11 @@ game-wave-url: /assets/images/tgib-past/tgib-wave.webp
 offtopic-url: /assets/images/tgib-past/focused-work.webp
 code-3deffect-url: /assets/images/tgib-past/2dglitchcode.webp
 projection-url: /assets/images/tgib-past/projection.webp
+
+screenshot-1-url: /assets/images/tgib-screenshots/1.webp
+screenshot-2-url: /assets/images/tgib-screenshots/2.webp
+screenshot-3-url: /assets/images/tgib-screenshots/3.webp
+screenshot-4-url: /assets/images/tgib-screenshots/4.webp
 
 3deffect-url: /assets/images/tgib-past/3d.webm
 
@@ -64,8 +73,8 @@ game-insight-text-1:
   pl: 'Wracając jeszcze do tej puli bugów. Jeśli miałbym wybrać najciekawszy efekt buga, który zaprogramowałem podczas game jamu, to wydaje mi się, że byłby to obrót kamery w osi Y (w którym gra zmienia się jakby w taki tryb niby 3D):'
 
 code3d-img:
-  en: '(Make sure to setup in Unity option "Perspective" in projection if you want to achieve a similar effect):'
-  pl: '(Upewnij się, aby ustawić w Unity opcję "Perspective" w projection jeśli chcesz uzyskać podobny efekt):'
+  en: 'Make sure to setup in Unity option "Perspective" in projection if you want to achieve a similar effect:'
+  pl: 'Upewnij się, aby ustawić w Unity opcję "Perspective" w projection jeśli chcesz uzyskać podobny efekt:'
 
 epilogue:
   en: Epilogue

@@ -1,8 +1,114 @@
+{% assign translations = site.data.tt-translations %}
 
 <div class="break"></div>
+<div class="stroke-bar"></div>
+<div class="break"></div>
 
-<h1 class="header">{{site.data.tt-translations.header[page.language]}}</h1>
+<h1 class="full-header">{{translations.header[page.language]}}</h1>
 
 <div class="hd-break"></div>
 
-<p class="full-text">{{site.data.tt-translations.text-1[page.language]}}</p>
+<p class="full-text">{{translations.game-description[page.language]}}</p>
+
+<div class="break"></div>
+
+<h1 class="full-header">{{translations.screenshots-header[page.language]}}</h1>
+<div class="hd-break"></div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-1-url}}">
+        </div>
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-2-url}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-3-url}}">
+        </div>
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-4-url}}">
+        </div>
+    </div>
+</div>
+
+<div class="break"></div>
+<div class="stroke-bar"></div>
+<div class="break"></div>
+
+<h1 class="full-header">{{translations.origin-header[page.language]}}</h1>
+
+<p class="full-text">{{translations.origin-text-1[page.language]}}</p>
+<div class="text-center justify-content-center">
+    <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.origin-paper-url}}">
+    <p class="full-text"><i>{{translations.origin-img-1[page.language]}}</i></p>
+</div>
+<div class="break"></div>
+<p class="full-text">{{translations.prototype-text[page.language]}}</p>
+<div class="text-center justify-content-center">
+    <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.prototype-url}}">
+</div>
+<div class="break"></div>
+<p class="full-text">{{translations.level-text[page.language]}}</p>
+<div class="text-center justify-content-center">
+    <video class="img-fluid" autoplay loop muted playsinline>
+        <source type="video/webm" alt="glowing" src="{{ base.url | prepend: site.url }}{{translations.level-1-url}}">
+    </video>
+    <p class="full-text"><i>{{translations.level-1-text[page.language]}}</i></p>
+    <div class="hd-break"></div>
+    <video class="img-fluid" autoplay loop muted playsinline>
+        <source type="video/webm" alt="glowing" src="{{ base.url | prepend: site.url }}{{translations.level-2-url}}">
+    </video>
+    <p class="full-text"><i>{{translations.level-2-text[page.language]}}</i></p>    
+    <div class="hd-break"></div>
+    <video class="img-fluid" autoplay loop muted playsinline>
+        <source type="video/webm" alt="glowing" src="{{ base.url | prepend: site.url }}{{translations.level-3-url}}">
+    </video>
+    <p class="full-text"><i>{{translations.level-3-text[page.language]}}</i></p>
+</div>
+<div class="break"></div>
+
+<p class="full-text">{{translations.ui-text[page.language]}}</p>
+<div class="text-center justify-content-center">
+    <video class="img-fluid" autoplay loop muted playsinline>
+        <source type="video/webm" alt="glowing" src="{{ base.url | prepend: site.url }}{{translations.ammo-url}}">
+    </video>
+    <p class="full-text"><i>{{translations.addition-ui-text[page.language]}}</i></p>
+</div>
+
+<p class="full-text">{{translations.mobs-text[page.language]}}</p>
+<div class="text-center justify-content-center">
+    <video class="img-fluid" autoplay loop muted playsinline>
+        <source type="video/webm" alt="glowing" src="{{ base.url | prepend: site.url }}{{translations.smiley-boss-url}}">
+    </video>
+</div>
+<p class="full-text">{{translations.mobs-mobs-text[page.language]}}</p>
+<div class="text-center justify-content-center">
+    <video class="img-fluid" autoplay loop muted playsinline>
+        <source type="video/webm" alt="glowing" src="{{ base.url | prepend: site.url }}{{translations.rockster-url}}">
+    </video>
+</div>
+<div class="ultra-break"></div>
+<p class="full-text">{{translations.pause-text[page.language]}}</p>
+<div class="break"></div>
+<p class="full-text">{{translations.dialogue-system-text[page.language]}}</p>
+<div class="text-center justify-content-center">
+    <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.code-url}}">
+</div>
+<div class="break"></div>
+<p class="full-text">{{translations.release-text[page.language]}}</p>
+<div class="text-center justify-content-center">
+    <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.discord-status-url}}">
+</div>
+<div class="ultra-break"></div>
+<p class="full-text">{{translations.afterrelease-text[page.language]}}</p>
+
+<div class="text-center justify-content-center">
+    <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.code-2-url}}">
+</div>
+<div class="break"></div>
+<div class="stroke-bar"></div>
+<div class="break"></div>
+
+<p class="full-text">{{translations.end-text[page.language]}}</p>

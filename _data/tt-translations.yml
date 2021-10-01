@@ -1,6 +1,94 @@
 header:
   en: What is The Towerer?
   pl: Czym jest The Towerer?
-text-1:
-  en: The Towerer is a 2D roguelike, bullet-hell shooter where you are thrown to the sci-fi universe, full of futuristic weapons and items.
-  pl: The Towerer to gra 2D roguelike, utrzymana w klimacie bullet-hell shooterów. Zostajesz w niej wrzucony do świata sci-fi, przepełnionego futurystycznymi broniami i przedmiotami.
+game-description:
+  en: The Towerer is a 2D roguelike, bullet-hell shooter where you are thrown to the sci-fi universe, full of futuristic weapons, items and enemies in form of 
+  pl: The Towerer to gra 2D roguelike z elementami bullet-hell shooterów. Zostajesz w niej wrzucony do świata sci-fi, przepełnionego futurystycznymi broniami, przedmiotami oraz przeciwnikami w postaci figur geometrycznych.
+
+screenshots-header:
+  en: 'Screenshots'
+  pl: 'Zrzuty ekranu'
+
+origin-header:
+  en: Origin
+  pl: Historia
+origin-text-1:
+  en: 'We started creating The Towerer game at the end of November 2019.'
+  pl: 'Nad grą The Towerer zaczęliśmy pracę pod koniec listopada 2019 roku.'
+
+origin-paper-url: /assets/images/tt-past/paperprototype.webp
+prototype-url: /assets/images/tt-past/prototype.webp
+screenshot-1-url: /assets/images/tt-screenshots/1.webp
+screenshot-2-url: /assets/images/tt-screenshots/2.webp
+screenshot-3-url: /assets/images/tt-screenshots/3.webp
+screenshot-4-url: /assets/images/tt-screenshots/4.webp
+level-1-url: /assets/images/tt-past/lv1_32.webm
+level-2-url: /assets/images/tt-past/lv2_31.webm
+level-3-url: /assets/images/tt-past/lv3_44.webm
+pause-url: /assets/images/tt-past/oldpause.webp
+ammo-url: /assets/images/tt-past/oldammo.webm
+smiley-boss-url: /assets/images/tt-past/smileyboss.webm
+rockster-url: /assets/images/tt-past/rockster.webm
+discord-status-url: /assets/images/tt-past/discordstatus.webp
+code-url: /assets/images/tt-past/code.webp
+code-2-url: /assets/images/tt-past/code2.webp
+
+origin-img-1:
+  en: 'First prototype on paper (the drawing is in Polish language, sorry to English people!)'
+  pl: 'Pierwszy prototyp na kartce'
+
+ui-text:
+  en: "The most memorable thing from my UI design was something we didn't add to the game in the end. This is the spitting of bullets from the ammo bar along with physics in the UI. This is better explained by seeing the video:"
+  pl: 'Z mojego projektowania interfejsu użytkownika najbardziej zapadło mi w pamięć coś, czego nie dodaliśmy finalnie do gry. Jest to wypluwanie pocisków z paska amunicji wraz z fizyką w UI. Lepiej to wytłumaczyć widząc filmik:'
+
+addition-ui-text:
+  en: This means that the more rapid-firing weapons you have, the more you lose visibility and in return you get more chaos on screen. Something for something.
+  pl: Oznacza to, że im bardziej szybkostrzelną broń posiadasz, tym tracisz bardziej na widoczności i w zamian otrzymujesz więcej chaosu na ekranie. Coś za coś.
+
+prototype-text:
+  en: "Soon after we had a playable prototype ready (which looked very poor, but that's common attribute among early game prototypes):"
+  pl: 'Wkrótce po tym mieliśmy gotowy grywalny prototyp (który wyglądał bardzo ubogo, co jest w sumie częste w obliczu prototypowania gier):'
+
+level-text:
+  en: 'Then, we started creating the first levels. I had mainly two principles for creating the levels - the first was to make each level distinctive in its own way and the second was to gradually introduce the player to the difficulty. You can find examples of some created by me levels below:'
+  pl: 'Potem, zaczęliśmy tworzyć pierwsze poziomy. Do tworzenia poziomów miałem głównie dwie zasady - pierwsza to, aby każdy poziom był charakterystyczny na swój sposób i druga to, aby stopniowo wprowadzać gracza do stopnia trudności. Przykłady niektórych moich poziomów możesz znaleźć poniżej:'
+
+mobs-text:
+  en: At the same time we were adding enemies and boss battles sequentially. I think that the most interesting boss I created is Smiley Guy. It's a boss that was inspired by the Joker character. What he does is annoyingly teleport players from one place to another while making the sound of laughter. In the second phase, the boss clones himself, creating two annoying versions of himself.
+  pl: 'W tym samym czasie dodawaliśmy po kolei kolejnych przeciwników oraz starcia z bossami. Myślę, że najciekawszym stworzonym przeze mnie bossem jest Smiley Guy. Jest to boss nawiązujący nieco do postaci Jokera. To, co robi, to wkurzająca dla graczy teleportacja z jednego miejsca na drugie wydając przy tym odgłos śmiechu. W drugiej fazie boss klonuje się, tworząc dwie swoje wkurzające wersje. Sam boss jest specjalnie wkurzający, ponieważ wzmaga tym samym motywację gracza do pokonania go:'
+
+mobs-mobs-text:
+  en: "Still on the subject of enemies. Of the more ordinary enemies, not bosses, an example would be the Rockster. It is a seemingly ordinary wall, but when the distance between the player is small it activates its movement, surprising the player:"
+  pl: 'Jeszcze pozostając przy temacie przeciwników. Ze zwyczajniejszych przeciwników, a nie bossów przykładem może być Rockster. Jest to z pozoru zwykła ściana, ale gdy dystans między graczem jest mały, to aktywuje swój ruch, zaskakując przy tym gracza:'
+
+level-1-text:
+  en: "In level 1_32, I thought it was interesting to place shooting enemies next to other shooting enemies, surrounded by destructible walls."
+  pl: W poziomie 1_32 wydało mi się ciekawym rozwiązaniem umieszczenie strzelających przeciwników obok innych strzelających przeciwników, otoczonych przez zniszczalne ściany.
+
+level-2-text:
+  en: "Level 2_31, on the other hand, is a genuine sense of claustrophobia and looking underfoot. "
+  pl: Poziom 2_31 natomiast to istne poczucie klaustrofobii i patrzenie pod nogi. 
+
+level-3-text:
+  en: "And level 3_44 is a dancing mat where spikes change their position from time to time and where an enemy called the necromancer (the one in the top left corner of the screen) spawns more and more enemies. Dodging or shooting? That is the question."
+  pl: A poziom 3_44 to mata do tańczenia, gdzie kolce zmieniają swoją pozycję co jakiś czas oraz gdzie przeciwnik zwany nekromantą (ten w lewym górnym rogu ekranu) spawnuje coraz to więcej przeciwników. Unik czy atak? Oto jest pytanie.
+
+pause-text:
+  en: 'After a temporary break due to our <a href="/tgib">participation in KrakJam and adding updates to This Game Is Broken</a>, the time has come for more improvements to The Towerer.'
+  pl: Po chwilowej przerwie związanej z naszym <a href="/tgib">udziałem w KrakJamie oraz dodawaniu aktualizacji do gry This Game Is Broken</a> przyszedł czas na kolejne ulepszenia do The Towerer.
+
+dialogue-system-text:
+  en: "On my return I programmed a dialogue system into The Towerer. It works on the basis of the queue class in C# and outgoing events to implement systems that happen either during the dialogue or after the dialogue has finished:"
+  pl: 'Po powrocie zaprogramowałem system dialogów do The Towerer. Działa on na bazie klasy kolejki w C# oraz eventów wychodzących do implementacji systemów, które dzieją się albo w czasie dialogu albo po zakończeniu:'
+
+release-text:
+  en: 'As we were slowly approaching the release of the game, I have implemented the Discord API. From now on, when a player starts the game, their current level completion status is shown on the Discord platform:'
+  pl: 'Zbliżając się powoli do premiery gry, zaimplementowałem Discord API. Od teraz, gdy gracz uruchamia grę to pokazuje się jego aktualny status przejścia poziomu na platformie Discord:'
+
+afterrelease-text:
+  en: 'After the release I got busy programming an inventory of cosmetic items for the player. This system rewards the player for completing levels by giving interesting hats, glasses and general clothing items:' 
+  pl: 'Po premierze zająłem się programowaniem ekwipunku kosmetycznych rzeczy dla gracza. System ten nagradza gracza za przejście kolejnych poziomów dając przy tym ciekawe kapelusze, okulary i ogólne przedmioty ubraniowe:'
+
+end-text:
+  en: 'Want more details about the game? Contact me at <a href="mailto:mateusz.kusionowicz@protonmail.com">mateusz.kusionowicz@protonmail.com</a> e-mail.'
+  pl: 'Chcesz więcej detali odnośnie gry? Skontaktuj się ze mną poprzez e-mail <a href="mailto:mateusz.kusionowicz@protonmail.com">mateusz.kusionowicz@protonmail.com</a>.'
