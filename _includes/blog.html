@@ -10,7 +10,7 @@
   {% for item in siteposts %}
     <p>
       <h2><a class="rm-line" href="{{ item.url }}">{{ item.title }}</a></h2>
-      {{ item.excerpt }}
+      <p>{{ item.description }}</p>
       <button onclick="location.href='{{ item.url }}'" class="btn btn-success resume-btn">Continue</button>
     </p>
     <div class="ultra-break"></div>

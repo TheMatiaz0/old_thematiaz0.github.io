@@ -59,6 +59,11 @@
     font-size: 20pt;
 }
 
+.post-break
+{
+    margin-top: 10%;
+}
+
 /* PC */
 @media (min-width: 1385px) {
     
