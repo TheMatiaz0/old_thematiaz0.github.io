@@ -2,7 +2,7 @@ header:
   en: What is The Towerer?
   pl: Czym jest The Towerer?
 game-description:
-  en: The Towerer is a 2D roguelike, bullet-hell shooter where you are thrown to the sci-fi universe, full of futuristic weapons, items and enemies in form of 
+  en: The Towerer is a 2D rogue-like, bullet-hell shooter based in the sci-fi universe full of geometric figures. The game consists of three chapters - Beginner, Middler, The End. Each one of them differs in difficulty level.
   pl: The Towerer to gra 2D roguelike z elementami bullet-hell shooterów. Zostajesz w niej wrzucony do świata sci-fi, przepełnionego futurystycznymi broniami, przedmiotami oraz przeciwnikami w postaci figur geometrycznych.
 
 screenshots-header:
@@ -34,7 +34,7 @@ code-url: /assets/images/tt-past/code.webp
 code-2-url: /assets/images/tt-past/code2.webp
 
 origin-img-1:
-  en: 'First prototype on paper (the drawing is in Polish language, sorry to English people!)'
+  en: 'First prototype on paper (the text on the drawing is in Polish language, sorry to English people!)'
   pl: 'Pierwszy prototyp na kartce'
 
 ui-text:
@@ -70,8 +70,8 @@ level-2-text:
   pl: Poziom 2_31 natomiast to istne poczucie klaustrofobii i patrzenie pod nogi. 
 
 level-3-text:
-  en: "And level 3_44 is a dancing mat where spikes change their position from time to time and where an enemy called the necromancer (the one in the top left corner of the screen) spawns more and more enemies. Dodging or shooting? That is the question."
-  pl: A poziom 3_44 to mata do tańczenia, gdzie kolce zmieniają swoją pozycję co jakiś czas oraz gdzie przeciwnik zwany nekromantą (ten w lewym górnym rogu ekranu) spawnuje coraz to więcej przeciwników. Unik czy atak? Oto jest pytanie.
+  en: "And level 3_44 is a dancing floor where spikes change their position from time to time and where an enemy called the necromancer (the one in the top left corner of the screen) spawns more and more enemies. Dodging or shooting? That is the question."
+  pl: A poziom 3_44 to istna mata do tańczenia, gdzie kolce zmieniają swoją pozycję co jakiś czas oraz gdzie przeciwnik zwany nekromantą (ten w lewym górnym rogu ekranu) spawnuje coraz to więcej przeciwników. Unik czy atak? Oto jest pytanie.
 
 pause-text:
   en: 'After a temporary break due to our <a href="/tgib">participation in KrakJam and adding updates to This Game Is Broken</a>, the time has come for more improvements to The Towerer.'
@@ -90,5 +90,5 @@ afterrelease-text:
   pl: 'Po premierze zająłem się programowaniem ekwipunku kosmetycznych rzeczy dla gracza. System ten nagradza gracza za przejście kolejnych poziomów dając przy tym ciekawe kapelusze, okulary i ogólne przedmioty ubraniowe:'
 
 end-text:
-  en: 'Want more details about the game? Contact me at <a href="mailto:mateusz.kusionowicz@protonmail.com">mateusz.kusionowicz@protonmail.com</a> e-mail.'
-  pl: 'Chcesz więcej detali odnośnie gry? Skontaktuj się ze mną poprzez e-mail <a href="mailto:mateusz.kusionowicz@protonmail.com">mateusz.kusionowicz@protonmail.com</a>.'
+  en: 'Want more details about the game? Contact me at <a href="mailto:mateusz.kusionowicz@gmail.com">mateusz.kusionowicz@gmail.com</a> e-mail.'
+  pl: 'Chcesz więcej detali odnośnie gry? Skontaktuj się ze mną poprzez e-mail <a href="mailto:mateusz.kusionowicz@gmail.com">mateusz.kusionowicz@gmail.com</a>.'

@@ -15,16 +15,17 @@
     en: >-
       Built and shipped a game in mainly three-person team. Created all of the user interface, programmed content,
       drove world building, planned the approach for marketing, made all
-      marketing assets and wrote dialogue.
+      marketing assets and wrote epilogue dialogues
     pl: >-
       Stworzyłem i wydałem grę w głównie trzyosobowym zespole. Stworzyłem cały
       interfejs użytkownika, zaprogramowałem kontent, poprowadziłem świat i lore
       gry, zaplanowałem kampanię marketingową i stworzyłem wszelkie materiały
-      promocyjne, napisałem dialog (do epilogu).
+      promocyjne, napisałem dialog (do epilogu)
   tools:
     - 'Unity (C#)'
     - Visual Studio
     - Google Docs
+    - Trello
   time:
     en: ~1 year
     pl: Około rok
@@ -53,8 +54,8 @@
 
 - title: THIS GAME IS BROKEN
   studio:
-     en: NullPtr (team made only for game jam)
-     pl: NullPtr (zespół stworzony tylko na okazję game jamu)
+     en: Casual (no studio, team made for game jam purpose)
+     pl: Brak (zespół stworzony na game jamie)
   start-date: 01/2020
   end-date: 02/2020
   platforms:
@@ -68,12 +69,12 @@
     en: >-
       Built a game in 72 hours with a four-person team in my first stationary
       game jam. Programmed mainly content such as bad effects when you pick up
-      the glitches. Improved game after the release with postprocessing effects.
+      the glitches. Improved game after the release with postprocessing effects
     pl: >-
       Stworzyłem grę w 72 godziny z czteroosobowym zespołem podczas mojego
       pierwszego stacjonarnego game jamu. Projektowałem i programowałem kontent
       do urozmaicenia gameplay'u. Zajmowałem się również patchowaniem i
-      implementowaniem efektów postprocessingu do gry po KrakJamie.
+      implementowaniem efektów postprocessingu do gry po KrakJamie
   tools:
     - 'Unity (C#)'
     - Visual Studio
@@ -106,3 +107,99 @@
         en: Game Jam Version
         pl: Wersja gry z Game Jamu
       url: 'https://v3.globalgamejam.org/2020/games/game-broken-1'
+
+- title: THE LAST PLANT
+  studio:
+     en: Casual (no studio, team made for game jam purpose)
+     pl: Brak (zespół stworzony na game jamie)
+  start-date: 08/2020
+  end-date: 10/2020
+  platforms:
+    - Windows
+    - Mac
+  dev-url: tlp
+  img-url: /assets/images/tlp-thumbnail.webp
+  gif-url: /assets/images/tlp-preview.webm
+  yt-url: 
+  description:
+    en: >-
+      NullReferenceException
+    pl: >-
+      Stworzyłem grę w 72 godziny z czteroosobowym zespołem podczas mojego
+      pierwszego stacjonarnego game jamu. Projektowałem i programowałem kontent
+      do urozmaicenia gameplay'u. Zajmowałem się również patchowaniem i
+      implementowaniem efektów postprocessingu do gry po KrakJamie
+  tools:
+    - 'Unity (C#)'
+    - Visual Studio
+    - Miro
+    - Trello
+  time:
+    en: 'Initally: 72h; After Extra Credits Game Jam: ~2 months'
+    pl: 'Początkowo: 72 godziny; Po Extra Credits Game Jamie: ~2 miesiące'
+  release:
+    en: 'Initially: August 24, 2020; After KrakJam: October 8, 2020'
+    pl: 'Początkowo: 24 sierpnia 2020; Po KrakJamie: 8 października 2020'
+  responsibility:
+    en: gameplay programming, game design, marketing
+    pl: programowanie rozgrywki, design rozgrywki, marketing
+  team:
+    en: five person team
+    pl: pięcioosobowy zespół
+  buttons:
+    - title: 
+        en: Game Jolt
+        pl: Game Jolt
+      url: 'https://gamejolt.com/games/The_Last_Plant/543776'
+    - title:
+        en: Itch.io
+        pl: Itch.io
+      url: 'https://thematiaz0.itch.io/the-last-plant'
+
+- title: KEEP IT COOL, MAN
+  studio:
+     en: Cyberevolver_Studios (not a registered company)
+     pl: Cyberevolver_Studios (niezarejestrowany zespół)
+  start-date: 08/2021
+  end-date: now
+  platforms:
+    - Windows
+    - Linux
+    - Mac
+  dev-url: kicm
+  img-url: /assets/images/kicm-thumbnail.webp
+  gif-url: /assets/images/kicm-preview.webm
+  yt-url: 
+  description:
+    en: >-
+      NullReferenceException
+    pl: >-
+      Stworzyłem grę w 72 godziny z czteroosobowym zespołem podczas mojego
+      pierwszego stacjonarnego game jamu. Projektowałem i programowałem kontent
+      do urozmaicenia gameplay'u. Zajmowałem się również patchowaniem i
+      implementowaniem efektów postprocessingu do gry po KrakJamie
+  tools:
+    - 'Unity (C#)'
+    - Visual Studio
+    - Miro
+    - Trello
+  time:
+    en: 'Work in progress...'
+    pl: 'W trakcie tworzenia...'
+  release:
+    en: ''
+    pl: ''
+  responsibility:
+    en: gameplay programming, graphics design, UI design, game design, marketing
+    pl: programowanie rozgrywki, design graficzny, design interfejsu użytkownika, design rozgrywki, marketing
+  team:
+    en: three core members (myself, Michał Biegaj and Mateusz Czernecki) and two additional ones outside the main team
+    pl: trzech głównych członków z zespołu (ja, Michał Biegaj i Mateusz Czernecki) oraz dwie osoby dodatkowe spoza
+  buttons:
+    - title: 
+        en: Game Website
+        pl: Strona gry
+      url: 'https://cyberevolver_studios.indie.af/kicm'
+
+
+

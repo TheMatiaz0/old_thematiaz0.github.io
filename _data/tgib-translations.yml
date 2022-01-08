@@ -59,10 +59,6 @@ explanation-item-1:
 explanation-item-2:
   en: The second is the bug itself, dangerous, it adds a random glitched effect from our created pool. 
   pl: Drugi to sam bug, niebezpieczny, dodaje losowy zbugowany efekt z naszej stworzonej przepełnionej bugami puli. 
-
-offtopic-img:
-  en: My old-school laptop sabotaged some plans, but I still managed to get the game in time ;)
-  pl: Mój starej daty laptop sabotażował niektóre plany, ale i tak udało się dowieźć grę na czas ;)
   
 game-insight-header:
   en: Insights into my game development process
