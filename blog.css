@@ -42,7 +42,7 @@
 
 .sized-btn
 {
-    width: 250px;
+    width: 240px;
     height: 50px;
     font-size: 13pt;
 }
@@ -62,11 +62,6 @@
 .post-break
 {
     margin-top: 10%;
-}
-
-/* PC */
-@media (min-width: 1385px) {
-    
 }
 
 /* Tablets (iPad, etc.) */

@@ -11,7 +11,7 @@
   dev-url: kicm
   img-url: /assets/images/kicm-thumbnail.webp
   gif-url: /assets/images/kicm-preview.webm
-  yt-url: 
+  yt-url: https://www.youtube-nocookie.com/embed/v6exM1MH4fY
   description:
     en: >-
       Actually, what I am doing, not did - currently programming and designing content like levels, features and user interface (DOTween is great!). Additionally, making all graphical and marketing assets
@@ -23,8 +23,8 @@
     - Miro
     - Trello
   time:
-    en: 'Work in progress...'
-    pl: 'W trakcie tworzenia...'
+    en: 'Work in progress'
+    pl: 'W trakcie tworzenia'
   release:
     en: 'March 2022'
     pl: 'Marzec 2022 r.'
@@ -39,6 +39,15 @@
         en: Game Website
         pl: Strona gry
       url: 'https://cyberevolver_studios.indie.af/kicm'
+    - title: 
+        en: Game Jolt
+        pl: Game Jolt
+      url: https://gamejolt.com/games/kicm/651477
+    - title: 
+        en: Itch.io
+        pl: Itch.io
+      url: https://cyberevolver-studios.itch.io/kicm
+
 
 - title: THE LAST PLANT
   studio:
@@ -52,7 +61,7 @@
   dev-url: tlp
   img-url: /assets/images/tlp-thumbnail.webp
   gif-url: /assets/images/tlp-preview.webm
-  yt-url: 
+  yt-url: https://www.youtube-nocookie.com/embed/U8vWZ1U0GtI
   description:
     en: >-
       Led a group of programmers during 72hr Extra Credits Game Jam, added behaviour state for enemies, implemented pathfinding system from Unity, made majority of cutscenes based on my scripted system and wrote all lore
