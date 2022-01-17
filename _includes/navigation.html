@@ -17,10 +17,9 @@
           <a role="button" class="nav-link fix-color dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown"
             aria-expanded="false">{{translations.projects[page.language]}}</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{%if page.language != 'en'%}/{{page.language}}{%endif%}/tt">THE
-                TOWERER</a></li>
-            <li><a class="dropdown-item" href="{%if page.language != 'en'%}/{{page.language}}{%endif%}/tgib">THIS GAME
-                IS BROKEN</a></li>
+            {% for item in site.data.projects %}
+              <li><a class="dropdown-item" href="{%if page.language != 'en'%}/{{page.language}}/{%endif%}{{item.dev-url}}">{{item.title}}</a></li>
+            {% endfor %}
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link"

@@ -1,13 +1,12 @@
 {% assign translations = site.data.projects-translations %}
 <div class="container">
-
     <h2 id="project" class="header"><span class="icon-shelf"><i
                 class="fas fa-th-list"></i></span>{{site.data.navigation-translations.projects[page.language]}}</h2>
     <div class="hd-break"></div>
     <div class="row projects justify-content-center">
         <div class="hd-break"></div>
         {% for item in site.data.projects %}
-        <div class="col-lg-6 unify-width">
+        <div class="col-lg-6 unify-width bottom-down">
             <div class="container rip">
                 <div class="row">
                     <div class="col-8">
@@ -16,7 +15,7 @@
                     </div>
                     <div class="col-4 platform-icons align-self-end text-end">
                         {% for platform in item.platforms %}
-                        <a aria-hidden="true" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="{{platform}}"><span><i
+                        <a aria-hidden="true" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="{%if {{platform}} == 'Apple' %}Mac{%else%}{{platform}}{%endif%}"><span><i
                                     class="fab fa-{{platform | downcase}} platforms"></i></span></a>
                         {% endfor %}
                     </div>

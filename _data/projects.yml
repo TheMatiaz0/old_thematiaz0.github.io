@@ -1,3 +1,90 @@
+- title: KEEP IT COOL, MAN
+  studio:
+     en: Cyberevolver_Studios (not a registered company)
+     pl: Cyberevolver_Studios (niezarejestrowany zespół)
+  start-date: 08/2021
+  end-date: now
+  platforms:
+    - Windows
+    - Linux
+    - Apple
+  dev-url: kicm
+  img-url: /assets/images/kicm-thumbnail.webp
+  gif-url: /assets/images/kicm-preview.webm
+  yt-url: 
+  description:
+    en: >-
+      Actually, what I am doing, not did - currently programming and designing content like levels, features and user interface (DOTween is great!). Additionally, making all graphical and marketing assets
+    pl: >-
+      Właściwie to nie dokonałem, bo projekt nie został jeszcze wydany - na tę chwilę programuję i zajmuję się designem contentu w postaci poziomów, przeciwników oraz interfejsu użytkownika. Dodatkowo, zajmuję się graficznymi i marketingowymi assetami
+  tools:
+    - 'Unity (C#)'
+    - Visual Studio
+    - Miro
+    - Trello
+  time:
+    en: 'Work in progress...'
+    pl: 'W trakcie tworzenia...'
+  release:
+    en: 'March 2022'
+    pl: 'Marzec 2022 r.'
+  responsibility:
+    en: gameplay programming, graphics design, UI design, game design, marketing
+    pl: programowanie rozgrywki, design graficzny, design interfejsu użytkownika, design rozgrywki, marketing
+  team:
+    en: three core members (myself, Michał Biegaj and Mateusz Czernecki) and two additional ones outside the main team
+    pl: trzech głównych członków z zespołu (ja, Michał Biegaj i Mateusz Czernecki) oraz dwie osoby dodatkowe spoza
+  buttons:
+    - title: 
+        en: Game Website
+        pl: Strona gry
+      url: 'https://cyberevolver_studios.indie.af/kicm'
+
+- title: THE LAST PLANT
+  studio:
+     en: Casual (no studio, team made for game jam purpose)
+     pl: Brak (zespół stworzony na game jamie)
+  start-date: 08/2020
+  end-date: 10/2020
+  platforms:
+    - Windows
+    - Apple
+  dev-url: tlp
+  img-url: /assets/images/tlp-thumbnail.webp
+  gif-url: /assets/images/tlp-preview.webm
+  yt-url: 
+  description:
+    en: >-
+      Led a group of programmers during 72hr Extra Credits Game Jam, added behaviour state for enemies, implemented pathfinding system from Unity, made majority of cutscenes based on my scripted system and wrote all lore
+    pl: >-
+      Poprowadziłem grupę programistów podczas 72 godzin game jamu, dodałem stany zachowań do przeciwników, zaimplementowałem pathfinding od Unity, stworzyłem większość cutscenek na bazie mojego systemu i napisałem całą otoczkę fabularną
+  tools:
+    - 'Unity (C#)'
+    - Visual Studio
+    - Miro
+    - Trello
+  time:
+    en: 'Initally: 72h; After Extra Credits Game Jam: ~2 months'
+    pl: 'Początkowo: 72 godziny; Po Extra Credits Game Jamie: ~2 miesiące'
+  release:
+    en: 'Initially: August 24, 2020; After KrakJam: October 8, 2020'
+    pl: 'Początkowo: 24 sierpnia 2020; Po KrakJamie: 8 października 2020'
+  responsibility:
+    en: gameplay programming, game design, marketing
+    pl: programowanie rozgrywki, design rozgrywki, marketing
+  team:
+    en: five person team
+    pl: pięcioosobowy zespół
+  buttons:
+    - title: 
+        en: Game Jolt
+        pl: Game Jolt
+      url: 'https://gamejolt.com/games/The_Last_Plant/543776'
+    - title:
+        en: Itch.io
+        pl: Itch.io
+      url: 'https://thematiaz0.itch.io/the-last-plant'
+
 - title: THE TOWERER
   studio:
      en: Cyberevolver_Studios (not a registered company)
@@ -107,99 +194,4 @@
         en: Game Jam Version
         pl: Wersja gry z Game Jamu
       url: 'https://v3.globalgamejam.org/2020/games/game-broken-1'
-
-- title: THE LAST PLANT
-  studio:
-     en: Casual (no studio, team made for game jam purpose)
-     pl: Brak (zespół stworzony na game jamie)
-  start-date: 08/2020
-  end-date: 10/2020
-  platforms:
-    - Windows
-    - Mac
-  dev-url: tlp
-  img-url: /assets/images/tlp-thumbnail.webp
-  gif-url: /assets/images/tlp-preview.webm
-  yt-url: 
-  description:
-    en: >-
-      NullReferenceException
-    pl: >-
-      Stworzyłem grę w 72 godziny z czteroosobowym zespołem podczas mojego
-      pierwszego stacjonarnego game jamu. Projektowałem i programowałem kontent
-      do urozmaicenia gameplay'u. Zajmowałem się również patchowaniem i
-      implementowaniem efektów postprocessingu do gry po KrakJamie
-  tools:
-    - 'Unity (C#)'
-    - Visual Studio
-    - Miro
-    - Trello
-  time:
-    en: 'Initally: 72h; After Extra Credits Game Jam: ~2 months'
-    pl: 'Początkowo: 72 godziny; Po Extra Credits Game Jamie: ~2 miesiące'
-  release:
-    en: 'Initially: August 24, 2020; After KrakJam: October 8, 2020'
-    pl: 'Początkowo: 24 sierpnia 2020; Po KrakJamie: 8 października 2020'
-  responsibility:
-    en: gameplay programming, game design, marketing
-    pl: programowanie rozgrywki, design rozgrywki, marketing
-  team:
-    en: five person team
-    pl: pięcioosobowy zespół
-  buttons:
-    - title: 
-        en: Game Jolt
-        pl: Game Jolt
-      url: 'https://gamejolt.com/games/The_Last_Plant/543776'
-    - title:
-        en: Itch.io
-        pl: Itch.io
-      url: 'https://thematiaz0.itch.io/the-last-plant'
-
-- title: KEEP IT COOL, MAN
-  studio:
-     en: Cyberevolver_Studios (not a registered company)
-     pl: Cyberevolver_Studios (niezarejestrowany zespół)
-  start-date: 08/2021
-  end-date: now
-  platforms:
-    - Windows
-    - Linux
-    - Mac
-  dev-url: kicm
-  img-url: /assets/images/kicm-thumbnail.webp
-  gif-url: /assets/images/kicm-preview.webm
-  yt-url: 
-  description:
-    en: >-
-      NullReferenceException
-    pl: >-
-      Stworzyłem grę w 72 godziny z czteroosobowym zespołem podczas mojego
-      pierwszego stacjonarnego game jamu. Projektowałem i programowałem kontent
-      do urozmaicenia gameplay'u. Zajmowałem się również patchowaniem i
-      implementowaniem efektów postprocessingu do gry po KrakJamie
-  tools:
-    - 'Unity (C#)'
-    - Visual Studio
-    - Miro
-    - Trello
-  time:
-    en: 'Work in progress...'
-    pl: 'W trakcie tworzenia...'
-  release:
-    en: ''
-    pl: ''
-  responsibility:
-    en: gameplay programming, graphics design, UI design, game design, marketing
-    pl: programowanie rozgrywki, design graficzny, design interfejsu użytkownika, design rozgrywki, marketing
-  team:
-    en: three core members (myself, Michał Biegaj and Mateusz Czernecki) and two additional ones outside the main team
-    pl: trzech głównych członków z zespołu (ja, Michał Biegaj i Mateusz Czernecki) oraz dwie osoby dodatkowe spoza
-  buttons:
-    - title: 
-        en: Game Website
-        pl: Strona gry
-      url: 'https://cyberevolver_studios.indie.af/kicm'
-
-
 

@@ -27,6 +27,19 @@ body {
     background-color: var(--black);
 }
 
+.bottom-down
+{
+    margin-bottom: 3%;
+}
+.rescue-bottom
+{
+    margin-bottom: -1.5%;
+}
+
+.send-media
+{
+    margin-left: 11.8%;
+}
 
 /* Utility */
 .tooltip
