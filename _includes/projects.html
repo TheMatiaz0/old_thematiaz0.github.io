@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-8">
                         <h3 class="game-title">{{item.title}}</h3>
-                        <span class="date-title">({{item.start-date}} - {{item.end-date}})</span>
+                        <span class="date-title">({{item.start-date}} - {{item.end-date[page.language]}})</span>
                     </div>
                     <div class="col-4 platform-icons align-self-end text-end">
                         {% for platform in item.platforms %}

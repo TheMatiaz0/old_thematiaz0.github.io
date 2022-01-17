@@ -3,7 +3,9 @@
      en: Cyberevolver_Studios (not a registered company)
      pl: Cyberevolver_Studios (niezarejestrowany zespół)
   start-date: 08/2021
-  end-date: now
+  end-date:
+    en: now
+    pl: teraz
   platforms:
     - Windows
     - Linux
@@ -54,7 +56,9 @@
      en: Casual (no studio, team made for game jam purpose)
      pl: Brak (zespół stworzony na game jamie)
   start-date: 08/2020
-  end-date: 10/2020
+  end-date: 
+    en: 10/2020
+    pl: 10/2020
   platforms:
     - Windows
     - Apple
@@ -99,7 +103,9 @@
      en: Cyberevolver_Studios (not a registered company)
      pl: Cyberevolver_Studios (niezarejestrowany zespół)
   start-date: 11/2018
-  end-date: 07/2020
+  end-date: 
+    en: 07/2020
+    pl: 07/2020
   platforms:
     - Windows
     - Linux
@@ -153,7 +159,9 @@
      en: Casual (no studio, team made for game jam purpose)
      pl: Brak (zespół stworzony na game jamie)
   start-date: 01/2020
-  end-date: 02/2020
+  end-date: 
+    en: 02/2020
+    pl: 02/2020
   platforms:
     - Windows
     - Android
