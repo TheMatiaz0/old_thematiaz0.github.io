@@ -14,6 +14,7 @@
   img-url: /assets/images/kicm-thumbnail.webp
   gif-url: /assets/images/kicm-preview.webm
   yt-url: https://www.youtube-nocookie.com/embed/v6exM1MH4fY
+  release-url: https://cyberevolver_studios.indie.af/kicm
   description:
     en: >-
       Actually, what I am doing, not did - currently programming and designing content like levels, features and user interface (DOTween is great!). Additionally, making all graphical and marketing assets
@@ -49,6 +50,7 @@
         en: Itch.io
         pl: Itch.io
       url: https://cyberevolver-studios.itch.io/kicm
+  
 
 
 - title: THE LAST PLANT
@@ -66,6 +68,7 @@
   img-url: /assets/images/tlp-thumbnail.webp
   gif-url: /assets/images/tlp-preview.webm
   yt-url: https://www.youtube-nocookie.com/embed/U8vWZ1U0GtI
+  release-url: https://thematiaz0.itch.io/the-last-plant
   description:
     en: >-
       Led a group of programmers during 72hr Extra Credits Game Jam, added behaviour state for enemies, implemented pathfinding system from Unity, made majority of cutscenes based on my scripted system and wrote all lore
@@ -113,6 +116,7 @@
   img-url: /assets/images/tt-thumbnail.webp
   gif-url: /assets/images/tt-preview.webm
   yt-url: https://www.youtube-nocookie.com/embed/A9Xg9ElNtLg
+  release-url: https://cyberevolver_studios.indie.af/the-towerer
   description:
     en: >-
       Built and shipped a game in mainly three-person team. Created all of the user interface, programmed content,
@@ -169,10 +173,11 @@
   img-url: /assets/images/tgib-thumbnail.webp
   gif-url: /assets/images/tgib-preview.webm
   yt-url: https://www.youtube-nocookie.com/embed/BC3UiNOp7Wc
+  release-url: https://thematiaz0.itch.io/this-game-is-broken
   description:
     en: >-
       Built a game in 72 hours with a four-person team in my first stationary
-      game jam. Programmed mainly content such as bad effects when you pick up
+      game jam named KrakJam. Programmed mainly content such as bad effects when you pick up
       the glitches. Improved game after the release with postprocessing effects
     pl: >-
       Stworzyłem grę w 72 godziny z czteroosobowym zespołem podczas mojego

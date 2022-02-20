@@ -3,11 +3,11 @@ contact:
   pl: KONTAKT
 reach:
   en: 'You can reach me through:'
-  pl: 'Możesz do mnie napisać na:'
+  pl: 'Formy kontaktu:'
 reach-media:
   - title: 'E-mail'
-    url: mateusz.kusionowicz@protonmail.com
-    true-url: mailto:mateusz.kusionowicz@protonmail.com
+    url: mateusz.kusionowicz@gmail.com
+    true-url: mailto:mateusz.kusionowicz@gmail.com
   - title: 'LinkedIn'
     url: https://www.linkedin.com/in/mateusz-kusionowicz
     true-url: https://www.linkedin.com/in/mateusz-kusionowicz

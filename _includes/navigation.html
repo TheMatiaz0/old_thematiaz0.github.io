@@ -3,7 +3,7 @@
   <div class="container-fluid justify-content-center nav-container">
     <a class="navbar-brand text-center text-lg-start"
       href="{%if page.language != 'en'%}/{{page.language}}{%endif%}/"><span><img class="navbar-brand-img img-fluid"
-          src="{{ base.url | prepend: site.url }}/favicon.webp" alt="TheMatiaz0"></span>ATEUSZ KUSIONOWICZ
+          src="{{ base.url | prepend: site.url }}/favicon.webp" alt="TheMatiaz0"></span>ateusz Kusionowicz
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +18,8 @@
             aria-expanded="false">{{translations.projects[page.language]}}</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             {% for item in site.data.projects %}
-              <li><a class="dropdown-item" href="{%if page.language != 'en'%}/{{page.language}}/{%endif%}{{item.dev-url}}">{{item.title}}</a></li>
+            <li><a class="dropdown-item"
+                href="{%if page.language != 'en'%}/{{page.language}}/{%endif%}{{item.dev-url}}">{{item.title}}</a></li>
             {% endfor %}
           </ul>
         </li>
@@ -28,8 +29,6 @@
         <li class="nav-item"><a class="nav-link"
             href="{%if page.language != 'en'%}/{{page.language}}{%endif%}{{page.baseurl}}/#contact">{{translations.contact[page.language]}}</a>
         </li>
-        <!-- <li class="nav-item"><a class="nav-link"
-            href="{%if page.language != 'en'%}/{{page.language}}/{%endif%}/blog">BLOG</a></li> -->
       </ul>
     </div>
   </div>

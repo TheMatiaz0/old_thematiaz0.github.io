@@ -4,15 +4,15 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 nowrap copyright text-center text-lg-start">
-                <span>© 2021 Mateusz Kusionowicz</span>
+                <span>© 2022 Mateusz Kusionowicz</span>
             </div>
             <div class="col-lg-4 nowrap text-center text-lg-end align-self-center">
 
                 <nav class="social-media">
                     {% for media in site.data.social-media %}
                     <a rel="noopener" class="social-media-btn" href="{{media.url}}" target="_blank"
-                      aria-label="{{media.label}}"><i class="{{media.icon}}"></i></a>
-                  {% endfor %}
+                        aria-label="{{media.label}}"><i class="{{media.icon}}"></i></a>
+                    {% endfor %}
                 </nav>
             </div>
         </div>

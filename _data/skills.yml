@@ -6,8 +6,8 @@ skill:
       - title: 'C#'
         img-url: assets/images/csharp.webp
         time:
-          en: 2 years of experience
-          pl: 2 lata doświadczenia
+          en: 3 years of experience
+          pl: 3 lata doświadczenia
       - title: Python
         img-url: assets/images/python.webp
         time:
@@ -20,8 +20,8 @@ skill:
       - title: Unity
         img-url: assets/images/unity.webp
         time:
-          en: 2 years of experience
-          pl: 2 lata doświadczenia
+          en: 3 years of experience
+          pl: 3 lata doświadczenia
   - category:
       en: SOFTWARE
       pl: PROGRAMY
@@ -29,13 +29,13 @@ skill:
       - title: Visual Studio
         img-url: assets/images/vs.webp
         time: 
-          en: 2 years of experience
-          pl: 2 lata doświadczenia
+          en: 3 years of experience
+          pl: 3 lata doświadczenia
       - title: Git
         img-url: assets/images/git.webp
         time:
-          en: 2 years of experience
-          pl: 2 lata doświadczenia
+          en: 3 years of experience
+          pl: 3 lata doświadczenia
       - title: Inkscape
         img-url: assets/images/inkscape.webp
         time: 
