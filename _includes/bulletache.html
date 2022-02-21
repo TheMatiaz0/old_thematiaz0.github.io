@@ -1,5 +1,28 @@
 {% assign translations = site.data.bulletache-translations %}
 
+<hr />
+<h1 class="full-header">{{translations.screenshots-header[page.language]}}</h1>
+<div class="hd-break"></div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-1-url}}">
+        </div>
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-2-url}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-3-url}}">
+        </div>
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-4-url}}">
+        </div>
+    </div>
+</div>
+<div class="break"></div>
+<hr />
 <p class="full-text">{{translations.please-hold-text[page.language]}}</p>
 <hr />
 <p class="full-text">{{translations.end-text[page.language]}}</p>

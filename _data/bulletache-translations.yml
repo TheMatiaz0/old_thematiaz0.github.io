@@ -1,3 +1,12 @@
+screenshots-header:
+  en: 'Screenshots'
+  pl: 'Zrzuty ekranu'
+
+screenshot-1-url: /assets/images/bulletache-screenshots/1.webp
+screenshot-2-url: /assets/images/bulletache-screenshots/2.webp
+screenshot-3-url: /assets/images/bulletache-screenshots/3.webp
+screenshot-4-url: /assets/images/bulletache-screenshots/4.webp
+
 please-hold-text:
   en: 'More info coming soon... probably after the patch release. For now, check out my other games or contact me.'
   pl: 'Więcej informacji wkrótce... najpewniej po patchu. Na tę chwilę, sprawdź moje inne gry lub skontaktuj się ze mną odnośnie tej gry.'

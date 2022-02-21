@@ -1,5 +1,27 @@
 {% assign translations = site.data.kicm-translations %}
 
+<hr />
+<h1 class="full-header">{{translations.screenshots-header[page.language]}}</h1>
+<div class="hd-break"></div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-1-url}}">
+        </div>
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-2-url}}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-3-url}}">
+        </div>
+        <div class="col">
+            <img class="img-fluid" src="{{ base.url | prepend: site.url }}{{translations.screenshot-4-url}}">
+        </div>
+    </div>
+</div>
+<hr />
 <h1 class="full-header">{{translations.header-devlogs[page.language]}}</h1>
 <div class="hd-break"></div>
 <p class="full-text">{{translations.text-devlogs[page.language]}}</p>

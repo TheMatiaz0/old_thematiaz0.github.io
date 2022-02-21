@@ -1,3 +1,12 @@
+screenshots-header:
+  en: 'Screenshots'
+  pl: 'Zrzuty ekranu'
+
+screenshot-1-url: /assets/images/kicm-screenshots/1.webp
+screenshot-2-url: /assets/images/kicm-screenshots/2.webp
+screenshot-3-url: /assets/images/kicm-screenshots/3.webp
+screenshot-4-url: /assets/images/kicm-screenshots/4.webp
+
 header-devlogs:
   en: Devlogs
   pl: Devlogi
