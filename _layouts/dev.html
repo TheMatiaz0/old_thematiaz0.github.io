@@ -28,8 +28,12 @@ layout: default
                     {{site.data.projects[page.id].release[page.language]}}</p>
                 <p class="info-text">Studio: {{site.data.projects[page.id].studio[page.language]}}</p>
                 <p class="info-text">{{translations.platforms[page.language]}}
-                    {% for platform in site.data.projects[page.id].platforms%}
+                    {% for platform in site.data.projects[page.id].platforms %}
+                    {% if platform == "Apple" %}
+                    Mac{%unless forloop.last %},{%endunless%}
+                    {%else%}
                     {{platform}}{%unless forloop.last %},{%endunless%}
+                    {%endif%}
                     {% endfor %}
                 </p>
                 <p class="info-text">{{translations.team[page.language]}}
