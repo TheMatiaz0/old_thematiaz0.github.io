@@ -1,5 +1,11 @@
-{% assign translations = site.data.tlp-translations %}
+{% assign translations = site.data.kicm-translations %}
 
-Work in progress...
+<h1 class="full-header">{{translations.header-devlogs[page.language]}}</h1>
+<div class="hd-break"></div>
+<p class="full-text">{{translations.text-devlogs[page.language]}}</p>
+<p class="full-text">{{translations.playlist-link[page.language]}}</p>
+<div class="hd-break"></div>
+<a href="{{translations.playlist-url}}" class="full-text">{{translations.playlist-url}}</a>
+<div class="ultra-break"></div>
 <hr />
 <p class="full-text">{{translations.end-text[page.language]}}</p>

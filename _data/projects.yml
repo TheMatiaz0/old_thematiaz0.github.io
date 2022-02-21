@@ -29,8 +29,8 @@
     en: 'Work in progress'
     pl: 'W trakcie tworzenia'
   release:
-    en: 'March 2022'
-    pl: 'Marzec 2022 r.'
+    en: 'April 2022'
+    pl: 'Kwiecień 2022 r.'
   responsibility:
     en: gameplay programming, graphics design, UI design, game design, marketing
     pl: programowanie rozgrywki, design graficzny, design interfejsu użytkownika, design rozgrywki, marketing
@@ -50,7 +50,53 @@
         en: Itch.io
         pl: Itch.io
       url: https://cyberevolver-studios.itch.io/kicm
-  
+
+
+- title: BULLETACHE
+  studio:
+     en: Shoutware (not a registered company)
+     pl: Shoutware (niezarejestrowany zespół)
+  start-date: 01/2022
+  end-date:
+    en: 01/2022
+    pl: 01/2022
+  platforms:
+    - Windows
+  dev-url: bulletache
+  img-url: /assets/images/bulletache-thumbnail.webp
+  gif-url: /assets/images/bulletache-preview.webm
+  release-url: https://globalgamejam.org/2022/games/bulletache-9
+  description:
+    en: >-
+      Programmed and designed all user interface (including animation above), created FPS controller with Cinemachine's Unity asset (with camera shaking), implemented all sound effects and music with slight variation for every play (adaptive music)
+    pl: >-
+      Zaprogramowałem i zaprojektowałem cały interfejs użytkownika (wliczając w to animację powyżej), stworzyłem FPS Controller na podstawie Cinemachine (standardowego assetu Unity), zaimplementowałem wszystkie dźwięki i muzykę z lekką zmienną podczas gry (adaptacyjna muzyka)
+  tools:
+    - 'Unity (C#)'
+    - Visual Studio
+    - Miro
+    - Trello
+  time:
+    en: 'Initially: 72h; After KrakJam: Now in progress'
+    pl: 'Początkowo: 72 godziny; Po KrakJamie: Teraz w trakcie patchowania'
+  release:
+    en: 'January 30, 2022'
+    pl: '30 stycznia 2022 r.'
+  responsibility:
+    en: gameplay programming, UI design, game design, cutscenes directing
+    pl: programowanie rozgrywki, design interfejsu użytkownika, design rozgrywki, reżyseria cutscenek
+  team:
+    en: five man team (three programmers and two graphic designers)
+    pl: pięcioosobowy zespół (trzech programistów i dwóch grafików)
+  buttons:
+    - title: 
+        en: Game Jam Version
+        pl: Wersja gamejamowa
+      url: 'https://globalgamejam.org/2022/games/bulletache-9'
+    - title: 
+        en: GitHub (source code)
+        pl: GitHub (kod źródłowy)
+      url: https://github.com/piratehacker/krakjam-2022
 
 
 - title: THE LAST PLANT

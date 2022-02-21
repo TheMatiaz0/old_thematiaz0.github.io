@@ -1,3 +1,17 @@
+header-devlogs:
+  en: Devlogs
+  pl: Devlogi
+
+text-devlogs: 
+  en: 'About the development process page, I think that video devlogs are good descriptors what this game is about and how it was made during this period of time.'
+  pl: 'Co do kulisów zza procesu tworzenia to myślę, że wideo devlogi które stworzyłem są doskonałym opisem gry, jak i historią jej powstawania.'
+
+playlist-link:
+  en: 'Playlist URL from YouTube:'
+  pl: 'Link do playlisty na YouTube:'
+
+playlist-url: 'https://www.youtube.com/playlist?list=PLS9AyL5saOzWf5uXNE0IBtBC1K1Meu-vt'
+
 end-text:
   en: 'Want more details about the game? Contact me at <a href="mailto:mateusz.kusionowicz@gmail.com">mateusz.kusionowicz@gmail.com</a> e-mail.'
   pl: 'Chcesz więcej detali odnośnie gry? Skontaktuj się ze mną poprzez e-mail <a href="mailto:mateusz.kusionowicz@gmail.com">mateusz.kusionowicz@gmail.com</a>.'

@@ -10,15 +10,20 @@ layout: default
     <div class="break"></div>
     <div class="container text-center text-lg-start">
         <div class="row">
+            {%if site.data.projects[page.id].yt-url %}
             <div class="col-xl-6">
                 <div class="container video-contain">
-                    <iframe width="100%" height="100%" src="{{site.data.projects[page.id].yt-url}}"
-                        title="YouTube video player" frameborder="0"
+                    <iframe src="{{site.data.projects[page.id].yt-url}}" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="col-xl-6">
+            {% assign classes = "col-xl-6" %}
+            {% else %}
+            {% assign classes = "justify-content-center text-center" %}
+            {% endif %}
+
+            <div class="{{classes}}">
                 <p class="info-text">{{translations.release[page.language]}}
                     {{site.data.projects[page.id].release[page.language]}}</p>
                 <p class="info-text">Studio: {{site.data.projects[page.id].studio[page.language]}}</p>
@@ -39,15 +44,15 @@ layout: default
                     {%endfor%}
                 </p>
                 <div class="ultra-break"></div>
-                    <div class="row justify-content-center">
-                        {% for btn in site.data.projects[page.id].buttons %}
-                        <div class="col-lg-5 bottom-down">
-                            <button rel noopener class="btn btn-success resume-btn sized-btn"
-                                onclick="window.open('{{btn.url}}', '_blank')">{{btn.title[page.language]}}
-                            </button>
-                        </div>
-                        {%endfor%}
+                <div class="row justify-content-center">
+                    {% for btn in site.data.projects[page.id].buttons %}
+                    <div class="col-lg-5 bottom-down">
+                        <button rel noopener class="btn btn-success resume-btn sized-btn"
+                            onclick="window.open('{{btn.url}}', '_blank')">{{btn.title[page.language]}}
+                        </button>
                     </div>
+                    {%endfor%}
+                </div>
             </div>
         </div>
     </div>
